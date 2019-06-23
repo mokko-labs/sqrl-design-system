@@ -1,19 +1,21 @@
 import React from 'react'
 
-import { Section, Container } from 'bloomer'
-import Card, { CardContent } from './lib/Card'
+import { Section, Container, Title } from 'bloomer'
+import { Box, Button, Card, CardContent } from './lib'
 
 function App() {
   return (
     <Section>
       <Container>
-        <Card>
-          <CardContent>
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-          </CardContent>
-        </Card>
+        <Box>
+          <Title isSize={1}>Hello</Title>
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <Button isColor="primary" className="is-rounded">
+            Hello
+          </Button>
+        </Box>
       </Container>
     </Section>
   )

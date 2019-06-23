@@ -1,8 +1,11 @@
+$primary: #9013fe;
 $main-background-color: #f4f7fc;
+$alt-background-color: #fafbfd;
 
 $body-background-color: $main-background-color;
 
 $card-shadow: none;
+$box-shadow: none;
 $card-border-radius: 8px;
 $card-border-color: #e2eaf8;
 
@@ -13,7 +16,16 @@ $card-border-color: #e2eaf8;
   font-family: 'Work Sans', sans-serif;
 }
 
+.bg-alt {
+  background-color: $alt-background-color;
+}
+
 .card {
+  border-radius: $card-border-radius;
+  border: 1px solid $card-border-color;
+}
+
+.box {
   border-radius: $card-border-radius;
   border: 1px solid $card-border-color;
 }
