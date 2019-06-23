@@ -1,8 +1,7 @@
-import React from "react";
-import "./App.scss";
+import React from 'react'
 
-import { Section, Container } from "bloomer";
-import Card, { CardContent } from "./lib/Card";
+import { Section, Container } from 'bloomer'
+import Card, { CardContent } from './lib/Card'
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
         </Card>
       </Container>
     </Section>
-  );
+  )
 }
 
-export default App;
+export default App
