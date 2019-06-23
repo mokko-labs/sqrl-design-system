@@ -1,8 +1,13 @@
-@import "bulma/bulma.sass";
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap');
+@import 'bulma/bulma.sass';
 
 html,
 body {
   background-color: #eeeef4;
+}
+
+* {
+  font-family: 'Work Sans', sans-serif;
 }
 
 .card {
