@@ -1,18 +1,19 @@
+$main-background-color: #f4f7fc;
+
+$body-background-color: $main-background-color;
+
+$card-shadow: none;
+$card-border-radius: 8px;
+$card-border-color: #e2eaf8;
+
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap');
 @import 'bulma/bulma.sass';
-
-html,
-body {
-  background-color: #eeeef4;
-}
 
 * {
   font-family: 'Work Sans', sans-serif;
 }
 
 .card {
-  border-radius: 8px;
-  box-shadow: none;
-  border: 1px solid rgba(0, 0, 100, 0.15);
-  background-color: white;
+  border-radius: $card-border-radius;
+  border: 1px solid $card-border-color;
 }
