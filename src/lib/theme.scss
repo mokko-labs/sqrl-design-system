@@ -1,1 +1,13 @@
 @import "bulma/bulma.sass";
+
+html,
+body {
+  background-color: #eeeef4;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 100, 0.15);
+  background-color: white;
+}
