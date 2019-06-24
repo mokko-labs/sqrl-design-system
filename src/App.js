@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Section, Container, Title } from 'bloomer'
-import { Box, Button, Card, CardContent } from './lib'
+import { Box, Button } from './lib'
 
 function App() {
   return (
