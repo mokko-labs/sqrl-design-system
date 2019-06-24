@@ -8,7 +8,8 @@ import {
   Container,
   Columns,
   Column,
-  Tile
+  Tile,
+  Title
 } from 'bloomer'
 
 export {
@@ -21,5 +22,6 @@ export {
   Section,
   Columns,
   Column,
-  Tile
+  Tile,
+  Title
 }
