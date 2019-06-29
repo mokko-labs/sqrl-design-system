@@ -4,6 +4,10 @@ $alt-background-color: #fafbfd;
 
 $body-background-color: $main-background-color;
 
+$family-sans-serif: 'Work Sans', BlinkMacSystemFont, -apple-system, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
 $card-shadow: none;
 $box-shadow: none;
 $card-border-radius: 8px;
@@ -12,9 +16,11 @@ $card-border-color: #e2eaf8;
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap');
 @import 'bulma/bulma.sass';
 
+/*
 * {
   font-family: 'Work Sans', sans-serif;
 }
+*/
 
 .bg-alt {
   background-color: $alt-background-color;
