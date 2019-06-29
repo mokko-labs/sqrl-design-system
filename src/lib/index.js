@@ -1,9 +1,12 @@
-import {
+export {
   Box,
   Button,
   Card,
   CardContent,
   CardHeader,
+  CardFooter,
+  CardHeaderItem,
+  CardFooterItem,
   Section,
   Container,
   Columns,
@@ -15,21 +18,3 @@ import {
   Control,
   Input
 } from 'bloomer'
-
-export {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Section,
-  Columns,
-  Column,
-  Tile,
-  Title,
-  Field,
-  Label,
-  Control,
-  Input
-}
