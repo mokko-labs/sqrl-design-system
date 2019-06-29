@@ -6974,11 +6974,11 @@ label.panel-block {
   border: 1px solid #e2eaf8; }
 
 h1 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 40px; }
 
 h2 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 32px; }
 
 h3 {
@@ -6993,3 +6993,12 @@ h4 {
 
 footer {
   background-color: #f4f7fc; }
+
+p {
+  font-size: 14px; }
+
+.typography.medium {
+  font-weight: 500; }
+
+.button {
+  font-weight: 600; }
