@@ -9,7 +9,11 @@ import {
   Columns,
   Column,
   Tile,
-  Title
+  Title,
+  Field,
+  Label,
+  Control,
+  Input
 } from 'bloomer'
 
 export {
@@ -23,5 +27,9 @@ export {
   Columns,
   Column,
   Tile,
-  Title
+  Title,
+  Field,
+  Label,
+  Control,
+  Input
 }

@@ -29,3 +29,29 @@ $card-border-color: #e2eaf8;
   border-radius: $card-border-radius;
   border: 1px solid $card-border-color;
 }
+
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+footer {
+  background-color: $main-background-color;
+}

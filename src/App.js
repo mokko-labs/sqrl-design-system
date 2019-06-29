@@ -1,17 +1,20 @@
 import React from 'react'
 
-import { Section, Container, Title } from 'bloomer'
-import { Box, Button } from './lib'
+import { Section, Container } from 'bloomer'
+import { Box, Button, Field, Label, Control, Input } from './lib'
 
 function App() {
   return (
     <Section>
       <Container>
         <Box>
-          <Title isSize={1}>Hello</Title>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          <h1>Hello</h1>
+          <Field>
+            <Label>Name</Label>
+            <Control>
+              <Input type="text" placeholder="Text Input" />
+            </Control>
+          </Field>{' '}
           <Button isColor="primary" className="is-rounded">
             Hello
           </Button>

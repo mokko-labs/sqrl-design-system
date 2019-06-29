@@ -6970,3 +6970,24 @@ label.panel-block {
 .box {
   border-radius: 8px;
   border: 1px solid #e2eaf8; }
+
+h1 {
+  font-weight: bold;
+  font-size: 40px; }
+
+h2 {
+  font-weight: bold;
+  font-size: 32px; }
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 40px; }
+
+h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 40px; }
+
+footer {
+  background-color: #f4f7fc; }
