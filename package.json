@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {
     "bloomer": "^0.6.5",
-    "bulma": "^0.7.5"
+    "bulma": "^0.7.5",
+    "classnames": "^2.2.6"
   },
   "peerDependencies": {
     "react": "^16.8.6",
@@ -15,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:lib": "rm -rf dist && npm run build:lib-assets && npm run build:lib-js && npm run build:lib-css",
+    "build:lib": "rm -rf dist && npm run build:lib-js && npm run build:lib-css",
     "build:lib-assets": "mkdir ./dist/ && mkdir ./dist/assets && cp src/lib/assets/*.* ./dist/assets/",
     "build:lib-js": "NODE_ENV=production babel --presets @babel/preset-react src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,*.scss",
     "build:lib-css": "node-sass --include-path ./src/lib --include-path ./node_modules ./src/lib/theme.scss ./dist/theme.css",
@@ -51,6 +52,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",

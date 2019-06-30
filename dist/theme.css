@@ -2597,7 +2597,7 @@ a.box:active {
 .tag:not(body) {
   align-items: center;
   background-color: whitesmoke;
-  border-radius: 4px;
+  border-radius: 2px;
   color: #4a4a4a;
   display: inline-flex;
   font-size: 0.75rem;
@@ -6990,9 +6990,6 @@ h4 {
   font-weight: 500;
   font-size: 20px;
   line-height: 40px; }
-
-footer {
-  background-color: #f4f7fc; }
 
 p {
   font-size: 14px; }

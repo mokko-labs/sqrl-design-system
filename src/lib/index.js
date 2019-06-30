@@ -13,6 +13,7 @@ export {
   Container,
   Columns,
   Column,
+  Tag,
   Tile,
   Title,
   Field,
