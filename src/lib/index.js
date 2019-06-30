@@ -20,3 +20,5 @@ export {
   Control,
   Input
 } from 'bloomer'
+
+export { default as FooterLogo } from './FooterLogo'

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Section, Container } from 'bloomer'
-import { Box, Button, Field, Label, Control, Input } from './lib'
+import { Box, Button, Field, FooterLogo, Label, Control, Input } from './lib'
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
             Hello
           </Button>
         </Box>
+        <FooterLogo />
       </Container>
     </Section>
   )
