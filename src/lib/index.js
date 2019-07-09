@@ -19,7 +19,14 @@ export {
   Field,
   Label,
   Control,
-  Input
+  Input,
+  Navbar,
+  NavbarBrand,
+  NavbarItem,
+  NavbarLink,
+  NavbarDivider,
+  NavbarStart,
+  NavbarEnd
 } from 'bloomer'
 
-export { default as FooterLogo } from './FooterLogo'
+export { default as FlatLogo } from './FlatLogo'
