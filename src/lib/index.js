@@ -26,7 +26,8 @@ export {
   NavbarLink,
   NavbarDivider,
   NavbarStart,
-  NavbarEnd
+  NavbarEnd,
+  Modal
 } from 'bloomer'
 
 export { default as FlatLogo } from './FlatLogo'
