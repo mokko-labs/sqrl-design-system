@@ -9,20 +9,34 @@ export default class CustomInput extends React.Component {
   constructor(...args) {
     super(...args);
 
-    _defineProperty(this, "state", {
-      value: ''
-    });
+    _defineProperty(this, "state", {});
 
-    _defineProperty(this, "_onFocus", () => {
+    _defineProperty(this, "_onFocus", evt => {
       this.setState({
         focus: true
       });
+
+      if (this.props.onFocus) {
+        this.props.onFocus(evt);
+      }
+
+      if (this.props.field && this.props.field.onFocus) {
+        this.props.field.onFocus(evt);
+      }
     });
 
-    _defineProperty(this, "_onBlur", () => {
+    _defineProperty(this, "_onBlur", evt => {
       this.setState({
         focus: false
       });
+
+      if (this.props.onBlur) {
+        this.props.onBlur(evt);
+      }
+
+      if (this.props.field && this.props.field.onBlur) {
+        this.props.field.onBlur(evt);
+      }
     });
 
     _defineProperty(this, "_onChange", event => {
@@ -38,28 +52,30 @@ export default class CustomInput extends React.Component {
       ...rest
     } = this.props;
     const state = this.state;
-    const hasFocus = rest && rest.focus || state.focus;
+    const hasFocus = state.focus;
     const value = rest && rest.value || state.value;
+    const hasValue = value && value.length > 0;
     const shouldFloat = value || hasFocus;
     return React.createElement("div", {
       className: classNames('sqrl-input', {
         focus: hasFocus,
-        value: !!value
+        value: hasValue
       })
     }, React.createElement(Label, {
       className: classNames({
         floating: shouldFloat,
         focus: hasFocus
       })
-    }, label), React.createElement(Control, null, React.createElement(Input, _extends({
-      onFocus: this._onFocus,
-      onBlur: this._onBlur,
-      value: value,
+    }, label), React.createElement(Control, null, this.props.input ? this.props.input : React.createElement(Input, _extends({
       onChange: this._onChange,
       className: classNames({
-        value: !!value
+        value: hasValue
       })
-    }, rest))));
+    }, rest, {
+      value: value || '',
+      onFocus: this._onFocus,
+      onBlur: this._onBlur
+    }))));
   }
 
 }

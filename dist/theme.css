@@ -7007,7 +7007,7 @@ p {
   padding-top: 20px;
   background-color: #eee; }
   .sqrl-input.focus, .sqrl-input.value {
-    border-radius: 4px; }
+    border-radius: 4px 4px 0 0; }
   .sqrl-input .label {
     color: #777;
     font-weight: normal;
