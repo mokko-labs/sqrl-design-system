@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Section, Container } from 'bloomer'
-import { Box, Button, Field, FlatLogo, Label, Control, Input } from './lib'
+import { Box, Button, Field, FlatLogo, CustomInput } from './lib'
 
 function App() {
   return (
@@ -10,10 +10,7 @@ function App() {
         <Box>
           <h1>Hello</h1>
           <Field>
-            <Label>Name</Label>
-            <Control>
-              <Input type="text" placeholder="Text Input" />
-            </Control>
+            <CustomInput label="Name" type="text" />
           </Field>{' '}
           <Button isColor="primary" className="is-rounded">
             Hello

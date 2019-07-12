@@ -7002,3 +7002,34 @@ p {
 
 .field {
   margin-bottom: 0; }
+
+.sqrl-input {
+  padding-top: 20px;
+  background-color: #eee; }
+  .sqrl-input.focus, .sqrl-input.value {
+    border-radius: 4px; }
+  .sqrl-input .label {
+    color: #777;
+    font-weight: normal;
+    position: absolute;
+    transform: translate(16px, 0px) scale(1.5);
+    transform-origin: left;
+    z-index: 100;
+    transition: transform 250ms ease, font-size 250ms ease;
+    pointer-events: none; }
+    .sqrl-input .label.focus {
+      color: #9013fe; }
+    .sqrl-input .label.floating {
+      transform: translate(16px, -16px); }
+  .sqrl-input .input {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    padding: 24px 16px;
+    font-size: 1.4em; }
+    .sqrl-input .input.value {
+      border-bottom: 2px solid #555; }
+    .sqrl-input .input:focus {
+      border-bottom: 2px solid #9013fe; }
