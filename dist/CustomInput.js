@@ -3,9 +3,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 import React from 'react';
-import { Input, Control, Label } from 'bloomer';
+import { Control, Label } from 'bloomer';
 import classNames from 'classnames';
-export default class CustomInput extends React.Component {
+
+class CustomInput extends React.Component {
   constructor(...args) {
     super(...args);
 
@@ -19,10 +20,6 @@ export default class CustomInput extends React.Component {
       if (this.props.onFocus) {
         this.props.onFocus(evt);
       }
-
-      if (this.props.field && this.props.field.onFocus) {
-        this.props.field.onFocus(evt);
-      }
     });
 
     _defineProperty(this, "_onBlur", evt => {
@@ -32,10 +29,6 @@ export default class CustomInput extends React.Component {
 
       if (this.props.onBlur) {
         this.props.onBlur(evt);
-      }
-
-      if (this.props.field && this.props.field.onBlur) {
-        this.props.field.onBlur(evt);
       }
     });
 
@@ -49,6 +42,7 @@ export default class CustomInput extends React.Component {
   render() {
     const {
       label,
+      innerRef,
       ...rest
     } = this.props;
     const state = this.state;
@@ -66,16 +60,21 @@ export default class CustomInput extends React.Component {
         floating: shouldFloat,
         focus: hasFocus
       })
-    }, label), React.createElement(Control, null, this.props.input ? this.props.input : React.createElement(Input, _extends({
-      onChange: this._onChange,
-      className: classNames({
-        value: hasValue
-      })
+    }, label), React.createElement(Control, null, this.props.input ? this.props.input : React.createElement("input", _extends({
+      onChange: this._onChange
     }, rest, {
       value: value || '',
+      ref: innerRef,
       onFocus: this._onFocus,
-      onBlur: this._onBlur
+      onBlur: this._onBlur,
+      className: classNames('input', {
+        value: hasValue
+      })
     }))));
   }
 
 }
+
+export default React.forwardRef((props, ref) => React.createElement(CustomInput, _extends({
+  innerRef: ref
+}, props)));

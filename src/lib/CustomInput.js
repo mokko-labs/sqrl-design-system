@@ -1,8 +1,8 @@
 import React from 'react'
-import { Input, Control, Label } from 'bloomer'
+import { Control, Label } from 'bloomer'
 import classNames from 'classnames'
 
-export default class CustomInput extends React.Component {
+class CustomInput extends React.Component {
   state = {}
 
   _onFocus = evt => {
@@ -11,9 +11,6 @@ export default class CustomInput extends React.Component {
     })
     if (this.props.onFocus) {
       this.props.onFocus(evt)
-    }
-    if (this.props.field && this.props.field.onFocus) {
-      this.props.field.onFocus(evt)
     }
   }
 
@@ -25,9 +22,6 @@ export default class CustomInput extends React.Component {
     if (this.props.onBlur) {
       this.props.onBlur(evt)
     }
-    if (this.props.field && this.props.field.onBlur) {
-      this.props.field.onBlur(evt)
-    }
   }
 
   _onChange = event => {
@@ -37,12 +31,11 @@ export default class CustomInput extends React.Component {
   }
 
   render() {
-    const { label, ...rest } = this.props
+    const { label, innerRef, ...rest } = this.props
     const state = this.state
 
     const hasFocus = state.focus
     const value = (rest && rest.value) || state.value
-
     const hasValue = value && value.length > 0
 
     const shouldFloat = value || hasFocus
@@ -63,13 +56,14 @@ export default class CustomInput extends React.Component {
           {this.props.input ? (
             this.props.input
           ) : (
-            <Input
+            <input
               onChange={this._onChange}
-              className={classNames({ value: hasValue })}
               {...rest}
               value={value || ''}
+              ref={innerRef}
               onFocus={this._onFocus}
               onBlur={this._onBlur}
+              className={classNames('input', { value: hasValue })}
             />
           )}
         </Control>
@@ -77,3 +71,7 @@ export default class CustomInput extends React.Component {
     )
   }
 }
+
+export default React.forwardRef((props, ref) => (
+  <CustomInput innerRef={ref} {...props} />
+))
