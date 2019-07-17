@@ -214,22 +214,19 @@ const SignupForm = () => (
             />
           </div>
 
-          {/*
-            <Field
-              className={
-                props.touched.email && props.errors.email ? 'is-invalid' : ''
-              }
-              type="email"
-              onChange={props.handleChange}
-              onBlur={props.handleBlur}
-              value={props.values.email}
-              id="email"
-              name="email"
-              label="Workplace Email"
-              component={CustomInput}
-            />
-
-            */}
+          <Field
+            className={
+              props.touched.email && props.errors.email ? 'is-invalid' : ''
+            }
+            type="email"
+            onChange={props.handleChange}
+            onBlur={props.handleBlur}
+            value={props.values.email}
+            id="email"
+            name="email"
+            label="Workplace Email"
+            component={CustomInput}
+          />
 
           <Field
             type="text"
@@ -256,95 +253,89 @@ const SignupForm = () => (
             )}
           />
 
-          {/*
+          <div className="divider-2">
+            <Field
+              className={
+                props.touched.employer && props.errors.employer
+                  ? 'is-invalid'
+                  : ''
+              }
+              type="text"
+              onChange={props.handleChange}
+              onBlur={props.handleBlur}
+              value={props.values.employer}
+              id="employer"
+              name="employer"
+              label="Employer"
+              component={CustomInput}
+            />
 
-            <div className="divider-2">
-              <Field
-                className={
-                  props.touched.employer && props.errors.employer
-                    ? 'is-invalid'
-                    : ''
-                }
-                type="text"
+            <FormField>
+              <CustomInput
+                label="State"
+                name="state"
+                value={props.values.state}
                 onChange={props.handleChange}
                 onBlur={props.handleBlur}
-                value={props.values.employer}
-                id="employer"
-                name="employer"
-                label="Employer"
-                component={CustomInput}
+                input={
+                  <Select
+                    className={
+                      props.touched.state && props.errors.state
+                        ? 'is-invalid'
+                        : ''
+                    }
+                  >
+                    <option value="" label="State" />
+                    {Object.keys(states).map(key => (
+                      <option
+                        value={states[key]}
+                        label={states[key]}
+                        key={key}
+                      />
+                    ))}
+                  </Select>
+                }
               />
-
-              <FormField>
-                <CustomInput
-                  label="State"
-                  name="state"
-                  value={props.values.state}
-                  onChange={props.handleChange}
-                  onBlur={props.handleBlur}
-                  input={
-                    <Select
-                      className={
-                        props.touched.state && props.errors.state
-                          ? 'is-invalid'
-                          : ''
-                      }
-                    >
-                      <option value="" label="State" />
-                      {Object.keys(states).map(key => (
-                        <option
-                          value={states[key]}
-                          label={states[key]}
-                          key={key}
-                        />
-                      ))}
-                    </Select>
-                  }
-                />
-              </FormField>
-            </div>
-            */}
-
-          {/*
-            <FormField>
-              <Select
-                className={
-                  props.touched.jobDesc && props.errors.jobDesc
-                    ? 'is-invalid'
-                    : ''
-                }
-                name="jobDesc"
-                value={props.values.jobDesc}
-                onChange={props.handleChange}
-                onBlur={props.handleBlur}
-              >
-                <option value="" label="Job Description" />
-                {jobDescriptions.map((s, i) => (
-                  <option value={s} label={s} key={`JobDesc${i}`} />
-                ))}
-              </Select>
             </FormField>
+          </div>
 
-            <FormField>
-              <Select
-                className={
-                  props.touched.employeeCount && props.errors.employeeCount
-                    ? 'is-invalid'
-                    : ''
-                }
-                name="employeeCount"
-                value={props.values.employeeCount}
-                onChange={props.handleChange}
-                onBlur={props.handleBlur}
-              >
-                <option value="" label="Number of Employees" />
-                {numEmployees.map((cat, i) => (
-                  <option value={cat} label={cat} key={`EmpCat${i}`} />
-                ))}
-              </Select>
-            </FormField>
+          <FormField>
+            <Select
+              className={
+                props.touched.jobDesc && props.errors.jobDesc
+                  ? 'is-invalid'
+                  : ''
+              }
+              name="jobDesc"
+              value={props.values.jobDesc}
+              onChange={props.handleChange}
+              onBlur={props.handleBlur}
+            >
+              <option value="" label="Job Description" />
+              {jobDescriptions.map((s, i) => (
+                <option value={s} label={s} key={`JobDesc${i}`} />
+              ))}
+            </Select>
+          </FormField>
 
-            */}
+          <FormField>
+            <Select
+              className={
+                props.touched.employeeCount && props.errors.employeeCount
+                  ? 'is-invalid'
+                  : ''
+              }
+              name="employeeCount"
+              value={props.values.employeeCount}
+              onChange={props.handleChange}
+              onBlur={props.handleBlur}
+            >
+              <option value="" label="Number of Employees" />
+              {numEmployees.map((cat, i) => (
+                <option value={cat} label={cat} key={`EmpCat${i}`} />
+              ))}
+            </Select>
+          </FormField>
 
           <Field
             component={RenderCheckbox}

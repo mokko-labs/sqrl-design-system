@@ -15,6 +15,8 @@ $card-border-color: #e2eaf8;
 
 $tag-radius: 2px;
 
+$sqrl-input-left: 16px;
+
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap');
 @import 'bulma/bulma.sass';
 
@@ -75,8 +77,6 @@ p {
 .field {
   margin-bottom: 0;
 }
-
-$sqrl-input-left: 16px;
 
 .sqrl-input {
   padding-top: 20px;
@@ -155,5 +155,19 @@ $sqrl-input-left: 16px;
     &:focus {
       border-bottom: 2px solid $primary;
     }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border-bottom: 2px solid #555;
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0px 1000px #eee inset;
   }
 }

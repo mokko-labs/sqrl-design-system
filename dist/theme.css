@@ -7054,3 +7054,15 @@ p {
       border-bottom: 2px solid #555; }
     .sqrl-input .input:focus {
       border-bottom: 2px solid #9013fe; }
+  .sqrl-input input:-webkit-autofill,
+  .sqrl-input input:-webkit-autofill:hover,
+  .sqrl-input input:-webkit-autofill:focus,
+  .sqrl-input textarea:-webkit-autofill,
+  .sqrl-input textarea:-webkit-autofill:hover,
+  .sqrl-input textarea:-webkit-autofill:focus,
+  .sqrl-input select:-webkit-autofill,
+  .sqrl-input select:-webkit-autofill:hover,
+  .sqrl-input select:-webkit-autofill:focus {
+    border-bottom: 2px solid #555;
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0px 1000px #eee inset; }
