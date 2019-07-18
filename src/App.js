@@ -10,6 +10,7 @@ import {
   Control,
   Select,
   CustomInput,
+  CustomSelect,
   FlatLogo
 } from './lib'
 
@@ -180,7 +181,7 @@ const SignupForm = () => (
         >
           <input type="hidden" name="form-name" value="signup" />
 
-          <div className="divider-2">
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
             <Field
               className={
                 props.touched.firstName && props.errors.firstName
@@ -253,7 +254,7 @@ const SignupForm = () => (
             )}
           />
 
-          <div className="divider-2">
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
             <Field
               className={
                 props.touched.employer && props.errors.employer
@@ -271,31 +272,17 @@ const SignupForm = () => (
             />
 
             <FormField>
-              <CustomInput
+              <CustomSelect
                 label="State"
                 name="state"
                 value={props.values.state}
                 onChange={props.handleChange}
                 onBlur={props.handleBlur}
-                input={
-                  <Select
-                    className={
-                      props.touched.state && props.errors.state
-                        ? 'is-invalid'
-                        : ''
-                    }
-                  >
-                    <option value="" label="State" />
-                    {Object.keys(states).map(key => (
-                      <option
-                        value={states[key]}
-                        label={states[key]}
-                        key={key}
-                      />
-                    ))}
-                  </Select>
-                }
-              />
+              >
+                {Object.keys(states).map(key => (
+                  <option value={states[key]} label={states[key]} key={key} />
+                ))}
+              </CustomSelect>
             </FormField>
           </div>
 

@@ -53,15 +53,21 @@ class CustomInput extends React.Component {
           {label}
         </Label>
         <Control>
-          <input
-            onChange={this._onChange}
-            {...rest}
-            value={value || ''}
-            ref={innerRef}
-            onFocus={this._onFocus}
-            onBlur={this._onBlur}
-            className={classNames('input', { value: hasValue })}
-          />
+          <div
+            className={classNames('select', {
+              value: hasValue,
+              focus: hasFocus
+            })}
+          >
+            <select
+              onChange={this._onChange}
+              {...rest}
+              value={value}
+              ref={innerRef}
+              onFocus={this._onFocus}
+              onBlur={this._onBlur}
+            />
+          </div>
         </Control>
       </div>
     )

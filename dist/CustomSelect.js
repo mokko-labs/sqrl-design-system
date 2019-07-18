@@ -60,17 +60,19 @@ class CustomInput extends React.Component {
         floating: shouldFloat,
         focus: hasFocus
       })
-    }, label), React.createElement(Control, null, React.createElement("input", _extends({
+    }, label), React.createElement(Control, null, React.createElement("div", {
+      className: classNames('select', {
+        value: hasValue,
+        focus: hasFocus
+      })
+    }, React.createElement("select", _extends({
       onChange: this._onChange
     }, rest, {
-      value: value || '',
+      value: value,
       ref: innerRef,
       onFocus: this._onFocus,
-      onBlur: this._onBlur,
-      className: classNames('input', {
-        value: hasValue
-      })
-    }))));
+      onBlur: this._onBlur
+    })))));
   }
 
 }
