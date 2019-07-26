@@ -7001,13 +7001,17 @@ p {
   font-weight: 600; }
 
 .field {
-  margin-bottom: 0; }
+  margin-bottom: 0px !important; }
+
+.label .checkbox {
+  margin-bottom: 28px; }
 
 .sqrl-input {
   position: relative;
   width: 100%;
   height: 56px;
-  background-color: #ededed; }
+  background-color: #ededed;
+  margin-bottom: 28px; }
   .sqrl-input.focus, .sqrl-input.value {
     border-radius: 4px 4px 0 0; }
   .sqrl-input .label {
