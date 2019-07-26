@@ -1,5 +1,5 @@
 import React from 'react'
-import { Control, Label } from 'bloomer'
+import { Label } from 'bloomer'
 import classNames from 'classnames'
 
 class CustomInput extends React.Component {
@@ -52,23 +52,22 @@ class CustomInput extends React.Component {
         >
           {label}
         </Label>
-        <Control>
-          <div
-            className={classNames('select', {
-              value: hasValue,
-              focus: hasFocus
-            })}
-          >
-            <select
-              onChange={this._onChange}
-              {...rest}
-              value={value}
-              ref={innerRef}
-              onFocus={this._onFocus}
-              onBlur={this._onBlur}
-            />
-          </div>
-        </Control>
+
+        <div
+          className={classNames('select', {
+            value: hasValue,
+            focus: hasFocus
+          })}
+        >
+          <select
+            onChange={this._onChange}
+            {...rest}
+            value={value}
+            ref={innerRef}
+            onFocus={this._onFocus}
+            onBlur={this._onBlur}
+          />
+        </div>
       </div>
     )
   }

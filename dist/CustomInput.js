@@ -3,7 +3,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 import React from 'react';
-import { Control, Label } from 'bloomer';
+import { Label } from 'bloomer';
 import classNames from 'classnames';
 
 class CustomInput extends React.Component {
@@ -60,7 +60,7 @@ class CustomInput extends React.Component {
         floating: shouldFloat,
         focus: hasFocus
       })
-    }, label), React.createElement(Control, null, React.createElement("input", _extends({
+    }, label), React.createElement("input", _extends({
       onChange: this._onChange
     }, rest, {
       value: value || '',
@@ -70,7 +70,7 @@ class CustomInput extends React.Component {
       className: classNames('input', {
         value: hasValue
       })
-    }))));
+    })));
   }
 
 }

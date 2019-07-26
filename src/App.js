@@ -279,6 +279,7 @@ const SignupForm = () => (
                 onChange={props.handleChange}
                 onBlur={props.handleBlur}
               >
+                <option value={null}></option>
                 {Object.keys(states).map(key => (
                   <option value={states[key]} label={states[key]} key={key} />
                 ))}
