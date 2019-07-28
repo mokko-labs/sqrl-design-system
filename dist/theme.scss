@@ -213,3 +213,20 @@ p {
     -webkit-box-shadow: 0 0 0px 1000px #eee inset;
   }
 }
+
+.buttons.has-addons {
+  .button {
+    border-radius: 8px;
+    border: solid 1px #202733;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+}
