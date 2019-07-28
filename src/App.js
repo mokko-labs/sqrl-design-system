@@ -8,7 +8,6 @@ import {
   Field as FormField,
   Label,
   Control,
-  Select,
   CustomInput,
   CustomSelect,
   FlatLogo
@@ -96,18 +95,6 @@ let states = {
   WI: 'Wisconsin',
   WY: 'Wyoming'
 }
-
-const jobDescriptions = [
-  'Business Owner',
-  'Finance Leader',
-  'HR Leader',
-  'Tech Leader',
-  'Payroll Provider',
-  'Employee',
-  'Other'
-]
-
-const numEmployees = ['1-50', '51-100', '101-500', '501-1000', '1000+']
 
 const encode = data => {
   return Object.keys(data)
@@ -287,44 +274,6 @@ const SignupForm = () => (
             </FormField>
           </div>
 
-          <FormField>
-            <Select
-              className={
-                props.touched.jobDesc && props.errors.jobDesc
-                  ? 'is-invalid'
-                  : ''
-              }
-              name="jobDesc"
-              value={props.values.jobDesc}
-              onChange={props.handleChange}
-              onBlur={props.handleBlur}
-            >
-              <option value="" label="Job Description" />
-              {jobDescriptions.map((s, i) => (
-                <option value={s} label={s} key={`JobDesc${i}`} />
-              ))}
-            </Select>
-          </FormField>
-
-          <FormField>
-            <Select
-              className={
-                props.touched.employeeCount && props.errors.employeeCount
-                  ? 'is-invalid'
-                  : ''
-              }
-              name="employeeCount"
-              value={props.values.employeeCount}
-              onChange={props.handleChange}
-              onBlur={props.handleBlur}
-            >
-              <option value="" label="Number of Employees" />
-              {numEmployees.map((cat, i) => (
-                <option value={cat} label={cat} key={`EmpCat${i}`} />
-              ))}
-            </Select>
-          </FormField>
-
           <Field
             component={RenderCheckbox}
             type="checkbox"
@@ -354,6 +303,12 @@ function App() {
           <Button isColor="primary" className="is-rounded">
             Hello
           </Button>
+
+          <div className="buttons has-addons" style={{ marginTop: 24 }}>
+            <Button>Personal</Button>
+            <Button className="is-dark">Company</Button>
+            <Button>Payment</Button>
+          </div>
         </Box>
         <FlatLogo />
       </Container>
