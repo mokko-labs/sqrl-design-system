@@ -24,6 +24,7 @@ export {
   NavbarBrand,
   NavbarItem,
   NavbarLink,
+  NavbarMenu,
   NavbarDivider,
   NavbarStart,
   NavbarEnd,
