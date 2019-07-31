@@ -25,6 +25,7 @@ export {
   NavbarItem,
   NavbarLink,
   NavbarMenu,
+  NavbarBurger,
   NavbarDivider,
   NavbarStart,
   NavbarEnd,
