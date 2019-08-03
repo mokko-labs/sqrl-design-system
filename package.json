@@ -5,7 +5,8 @@
   "dependencies": {
     "bloomer": "^0.6.5",
     "bulma": "^0.7.5",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "react-switch": "^5.0.1"
   },
   "peerDependencies": {
     "react": "^16.8.6",

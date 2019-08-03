@@ -10,7 +10,8 @@ import {
   Control,
   CustomInput,
   CustomSelect,
-  FlatLogo
+  FlatLogo,
+  Switch
 } from './lib'
 
 import MaskedInput from 'react-text-mask'
@@ -291,33 +292,52 @@ const SignupForm = () => (
   </div>
 )
 
-function App() {
-  return (
-    <Section>
-      <Container>
-        <Box>
-          <h1>Hello</h1>
+class App extends React.Component {
+  state = {
+    switchOn: false
+  }
 
-          <CustomInput label="Name" type="text" />
+  switchChanged = checked => {
+    this.setState({
+      switchOn: checked
+    })
+  }
 
-          <Button isColor="primary" className="is-rounded">
-            Hello
-          </Button>
+  render() {
+    return (
+      <Section>
+        <Container>
+          <Box>
+            <h1>Hello</h1>
 
-          <div className="buttons has-addons" style={{ marginTop: 24 }}>
-            <Button>Personal</Button>
-            <Button className="is-dark">Company</Button>
-            <Button>Payment</Button>
-          </div>
-        </Box>
-        <FlatLogo />
-      </Container>
-      <Container>
-        <h1>Form Demo with Formik</h1>
-        <SignupForm />
-      </Container>
-    </Section>
-  )
+            <CustomInput label="Name" type="text" />
+
+            <Button isColor="primary" className="is-rounded">
+              Hello
+            </Button>
+
+            <div className="buttons has-addons" style={{ marginTop: 24 }}>
+              <Button>Personal</Button>
+              <Button className="is-dark">Company</Button>
+              <Button>Payment</Button>
+            </div>
+
+            <div>
+              <Switch
+                onChange={this.switchChanged}
+                checked={this.state.switchOn}
+              />
+            </div>
+          </Box>
+          <FlatLogo />
+        </Container>
+        <Container>
+          <h1>Form Demo with Formik</h1>
+          <SignupForm />
+        </Container>
+      </Section>
+    )
+  }
 }
 
 export default App
