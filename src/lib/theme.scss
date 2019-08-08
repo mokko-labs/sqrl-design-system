@@ -1,5 +1,5 @@
 $primary: #9013fe;
-$main-background-color: #f4f7fc;
+$main-background-color: #fafafa;
 $alt-background-color: #fafbfd;
 
 $body-background-color: $main-background-color;
@@ -25,6 +25,10 @@ $sqrl-input-left: 16px;
   font-family: 'Work Sans', sans-serif;
 }
 */
+
+.bg-main {
+  background-color: $main-background-color;
+}
 
 .bg-alt {
   background-color: $alt-background-color;
