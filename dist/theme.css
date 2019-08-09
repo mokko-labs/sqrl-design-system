@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap");
 /*! bulma.io v0.7.5 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
@@ -243,14 +244,8 @@ html {
   box-sizing: inherit; }
 
 img,
-embed,
-iframe,
-object,
 video {
   height: auto;
-  max-width: 100%; }
-
-audio {
   max-width: 100%; }
 
 iframe {
@@ -3610,7 +3605,7 @@ a.tag:hover {
       pointer-events: none; }
     .breadcrumb li + li::before {
       color: #b5b5b5;
-      content: "\0002f"; }
+      content: "/"; }
   .breadcrumb ul,
   .breadcrumb ol {
     align-items: flex-start;
@@ -3634,13 +3629,13 @@ a.tag:hover {
   .breadcrumb.is-large {
     font-size: 1.5rem; }
   .breadcrumb.has-arrow-separator li + li::before {
-    content: "\02192"; }
+    content: "→"; }
   .breadcrumb.has-bullet-separator li + li::before {
-    content: "\02022"; }
+    content: "•"; }
   .breadcrumb.has-dot-separator li + li::before {
-    content: "\000b7"; }
+    content: "·"; }
   .breadcrumb.has-succeeds-separator li + li::before {
-    content: "\0227B"; }
+    content: "≻"; }
 
 .card {
   background-color: white;
@@ -4903,10 +4898,10 @@ a.navbar-item,
     display: block; }
   .navbar > .container .navbar-brand,
   .container > .navbar .navbar-brand {
-    margin-left: -.75rem; }
+    margin-left: -0.75rem; }
   .navbar > .container .navbar-menu,
   .container > .navbar .navbar-menu {
-    margin-right: -.75rem; }
+    margin-right: -0.75rem; }
   .navbar.is-fixed-bottom-desktop, .navbar.is-fixed-top-desktop {
     left: 0;
     position: fixed;
