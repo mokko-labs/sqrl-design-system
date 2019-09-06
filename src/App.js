@@ -11,7 +11,8 @@ import {
   CustomInput,
   CustomSelect,
   FlatLogo,
-  Switch
+  Switch,
+  InPlaceNotification
 } from './lib'
 
 import MaskedInput from 'react-text-mask'
@@ -293,6 +294,7 @@ const SignupForm = () => (
 )
 
 class App extends React.Component {
+  notificationRef = React.createRef()
   state = {
     switchOn: false
   }
@@ -301,6 +303,10 @@ class App extends React.Component {
     this.setState({
       switchOn: checked
     })
+  }
+
+  _showNotification = message => {
+    this.notificationRef.current.showNotification(message || 'This is a notification!')
   }
 
   render() {
@@ -330,6 +336,12 @@ class App extends React.Component {
             </div>
           </Box>
           <FlatLogo />
+        </Container>
+        <Container>
+          <InPlaceNotification ref={this.notificationRef} />
+          <Button isColor="primary" className="is-rounded" onClick={() => this._showNotification()}>
+            Show In-place Notification
+          </Button>
         </Container>
         <Container>
           <h1>Form Demo with Formik</h1>

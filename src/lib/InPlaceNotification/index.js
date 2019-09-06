@@ -8,7 +8,7 @@ class Notification extends PureComponent {
     isActive: false
   }
 
-  openNotification = (message = 'A message') => {
+  showNotification = (message = 'A message') => {
     this.message = message
     this.setState({ isActive: true }, () => {
       setTimeout(() => {
