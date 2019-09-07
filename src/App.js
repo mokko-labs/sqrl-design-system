@@ -305,8 +305,8 @@ class App extends React.Component {
     })
   }
 
-  _showNotification = message => {
-    this.notificationRef.current.showNotification(message || 'This is a notification!')
+  _showNotification = (message, type) => {
+    this.notificationRef.current.showNotification(message, type)
   }
 
   render() {
@@ -339,7 +339,13 @@ class App extends React.Component {
         </Container>
         <Container>
           <InPlaceNotification ref={this.notificationRef} />
-          <Button isColor="primary" className="is-rounded" onClick={() => this._showNotification()}>
+          <Button
+            isColor="primary"
+            className="is-rounded"
+            onClick={() =>
+              this._showNotification('This is a Notification', 'success')
+            }
+          >
             Show In-place Notification
           </Button>
         </Container>

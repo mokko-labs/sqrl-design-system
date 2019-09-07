@@ -3,13 +3,15 @@ import Styles from './inPlaceNotification.module.scss'
 
 class Notification extends PureComponent {
   message = ''
+  type = ''
 
   state = {
-    isActive: false
+    isActive: false,
   }
 
-  showNotification = (message = 'A message') => {
+  showNotification = (message = 'A message', type) => {
     this.message = message
+    this.type = type
     this.setState({ isActive: true }, () => {
       setTimeout(() => {
         this.setState({ isActive: false })
@@ -23,7 +25,7 @@ class Notification extends PureComponent {
       <div style={{ position: 'relative' }}>
         <div
           className={
-            isActive ? [Styles.notification, Styles.show].join(' ') : Styles.notification
+            isActive ? [Styles.notification, Styles.show, Styles[this.type]].join(' ') : Styles.notification
           }
         >
           {this.message}
