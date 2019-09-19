@@ -43,6 +43,7 @@ class CustomInput extends React.Component {
     const {
       label,
       innerRef,
+      style,
       ...rest
     } = this.props;
     const state = this.state;
@@ -54,7 +55,8 @@ class CustomInput extends React.Component {
       className: classNames('sqrl-input', {
         focus: hasFocus,
         value: hasValue
-      })
+      }),
+      style: style
     }, React.createElement(Label, {
       className: classNames({
         floating: shouldFloat,
