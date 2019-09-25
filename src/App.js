@@ -339,15 +339,32 @@ class App extends React.Component {
         </Container>
         <Container>
           <InPlaceNotification ref={this.notificationRef} />
-          <Button
-            isColor="primary"
-            className="is-rounded"
-            onClick={() =>
-              this._showNotification('This is a Notification', 'success')
-            }
-          >
-            Show In-place Notification
-          </Button>
+          <div style={{ display: 'flex', flexDirection: 'column', width: 400 }}>
+            <Button
+              className="is-rounded"
+              onClick={() =>
+                this._showNotification('This is a Notification', 'success')
+              }
+            >
+              In-place Notification : Success
+            </Button>
+            <Button
+              className="is-rounded"
+              onClick={() =>
+                this._showNotification('This is a Notification', 'error')
+              }
+            >
+              In-place Notification : Error
+            </Button>
+            <Button
+              className="is-rounded"
+              onClick={() =>
+                this._showNotification('This is a Notification', 'warn')
+              }
+            >
+              In-place Notification : Warn
+            </Button>
+          </div>
         </Container>
         <Container>
           <h1>Form Demo with Formik</h1>
