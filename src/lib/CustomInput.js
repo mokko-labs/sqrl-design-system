@@ -31,7 +31,7 @@ class CustomInput extends React.Component {
   }
 
   render() {
-    const { label, innerRef, ...rest } = this.props
+    const { label, innerRef, style, ...rest } = this.props
     const state = this.state
 
     const hasFocus = state.focus
@@ -46,6 +46,7 @@ class CustomInput extends React.Component {
           focus: hasFocus,
           value: hasValue
         })}
+        style={style}
       >
         <Label
           className={classNames({ floating: shouldFloat, focus: hasFocus })}

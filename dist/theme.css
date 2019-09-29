@@ -7008,7 +7008,7 @@ p {
   position: relative;
   width: 100%;
   height: 56px;
-  background-color: #ededed;
+  background-color: rgba(0, 0, 0, 0.097);
   margin-bottom: 28px; }
   .sqrl-input.focus, .sqrl-input.value {
     border-radius: 4px 4px 0 0; }
