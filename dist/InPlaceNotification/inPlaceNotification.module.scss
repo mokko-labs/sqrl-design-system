@@ -1,0 +1,80 @@
+.notification {
+  visibility: hidden;
+  min-width: 250px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -125px;
+  z-index: 1000;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #333;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+}
+
+.notification.success {
+  background-color: #00A400;
+}
+
+.notification.error {
+  background-color: #D5505C;
+}
+
+.notification.warn {
+  background-color: #E5A435;
+}
+
+.notification.show {
+  display: block;
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 15px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 15px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 15px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 15px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

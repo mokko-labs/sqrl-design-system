@@ -6,7 +6,7 @@ class Notification extends PureComponent {
   type = ''
 
   state = {
-    isActive: false,
+    isActive: false
   }
 
   showNotification = (message = 'A message', type) => {
@@ -15,7 +15,7 @@ class Notification extends PureComponent {
     this.setState({ isActive: true }, () => {
       setTimeout(() => {
         this.setState({ isActive: false })
-      }, 3000)
+      }, 5000)
     })
   }
 
@@ -25,7 +25,9 @@ class Notification extends PureComponent {
       <div style={{ position: 'relative' }}>
         <div
           className={
-            isActive ? [Styles.notification, Styles.show, Styles[this.type]].join(' ') : Styles.notification
+            isActive
+              ? [Styles.notification, Styles.show, Styles[this.type]].join(' ')
+              : Styles.notification
           }
         >
           {this.message}
