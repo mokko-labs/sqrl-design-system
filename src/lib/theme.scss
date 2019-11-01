@@ -237,7 +237,7 @@ p {
 
 .button.primary {
   border-radius: 24px;
-  background-color: #9013fe;
+  background-color: $primary;
   font-size: 16px;
   font-weight: 600;
   font-stretch: normal;
@@ -250,20 +250,30 @@ p {
   height: 48px;
   border: none;
 
-  &:hover {
+  &:hover,
+  &.hover {
     background-color: #a034ff;
   }
 
-  &:active {
+  &:active,
+  &.active {
     background-color: #620faa;
   }
 
-  &:focus {
-    box-shadow: 0 0 0 4px #d19dff;
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 4px transparentize($primary, 0.7);
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     background-color: #e4e9ff;
     color: #967aeb;
+  }
+}
+
+.sqrl-util-spread {
+  > * {
+    margin-right: 8px;
   }
 }

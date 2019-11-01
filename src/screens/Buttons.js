@@ -6,7 +6,19 @@ export default () => (
     <Container>
       <h1>Buttons Page</h1>
 
-      <Button disabled>Get Started</Button>
+      <hr />
+
+      <h2>Primary Button</h2>
+      <div className="sqrl-util-spread">
+        <Button>Get Started</Button>
+        <Button className="hover">Get Started</Button>
+        <Button className="active">Get Started</Button>
+        <Button className="disabled">Get Started</Button>
+
+        <Button className="focus">Get Started</Button>
+        <Button className="hover focus">Get Started</Button>
+        <Button className="active focus">Get Started</Button>
+      </div>
 
       <br />
     </Container>
