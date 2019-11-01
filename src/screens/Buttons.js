@@ -40,6 +40,27 @@ export default () => (
       </div>
 
       <hr />
+      <h2>Secondary Button (Stroke / Outline)</h2>
+      <div className="sqrl-util-spread">
+        <SecondaryButton className="outline">Get Started</SecondaryButton>
+        <SecondaryButton className="outline hover">Get Started</SecondaryButton>
+        <SecondaryButton className="outline active">
+          Get Started
+        </SecondaryButton>
+        <SecondaryButton className="outline" disabled>
+          Get Started
+        </SecondaryButton>
+
+        <SecondaryButton className="outline focus">Get Started</SecondaryButton>
+        <SecondaryButton className="outline hover focus">
+          Get Started
+        </SecondaryButton>
+        <SecondaryButton className="outline active focus">
+          Get Started
+        </SecondaryButton>
+      </div>
+
+      <hr />
       <h2>Tertiary Button</h2>
       <div className="sqrl-util-spread">
         <TertiaryButton>Get Started</TertiaryButton>
@@ -50,6 +71,25 @@ export default () => (
         <TertiaryButton className="focus">Get Started</TertiaryButton>
         <TertiaryButton className="hover focus">Get Started</TertiaryButton>
         <TertiaryButton className="active focus">Get Started</TertiaryButton>
+      </div>
+
+      <hr />
+      <h2>Tertiary Button (Stroke / Outline)</h2>
+      <div className="sqrl-util-spread">
+        <TertiaryButton className="outline">Get Started</TertiaryButton>
+        <TertiaryButton className="outline hover">Get Started</TertiaryButton>
+        <TertiaryButton className="outline active">Get Started</TertiaryButton>
+        <TertiaryButton className="outline" disabled>
+          Get Started
+        </TertiaryButton>
+
+        <TertiaryButton className="outline focus">Get Started</TertiaryButton>
+        <TertiaryButton className="outline hover focus">
+          Get Started
+        </TertiaryButton>
+        <TertiaryButton className="outline active focus">
+          Get Started
+        </TertiaryButton>
       </div>
       <br />
     </Container>

@@ -310,6 +310,30 @@ p {
   &.disabled {
     background-color: #c2c0c6;
   }
+
+  &.outline {
+    background-color: transparent;
+    border: solid 2px #202733;
+    color: #202733;
+
+    &:hover,
+    &.hover {
+      color: #9013fe;
+      border: solid 2px #9013fe;
+    }
+
+    &:active,
+    &.active {
+      border: solid 2px #620faa;
+      color: #620faa;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: #7d868e;
+      border: solid 2px #7d868e;
+    }
+  }
 }
 
 .button.tertiary {
@@ -346,6 +370,30 @@ p {
   &.disabled {
     background-color: #e4e9ff;
     color: #967aeb;
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: solid 2px #202733;
+    color: #202733;
+
+    &:hover,
+    &.hover {
+      color: #9013fe;
+      border: solid 2px #9013fe;
+    }
+
+    &:active,
+    &.active {
+      border: solid 2px #620faa;
+      color: #620faa;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: #7d868e;
+      border: solid 2px #7d868e;
+    }
   }
 }
 
