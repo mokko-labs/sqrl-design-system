@@ -234,3 +234,172 @@ p {
     letter-spacing: normal;
   }
 }
+
+@mixin focus-shadow($size) {
+  box-shadow: 0 0 0 $size transparentize($primary, 0.7);
+}
+
+.button.primary {
+  border-radius: 24px;
+  background-color: $primary;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 24px;
+  height: 48px;
+  border: none;
+
+  &:hover,
+  &.hover {
+    background-color: #a034ff;
+  }
+
+  &:active,
+  &.active {
+    background-color: #620faa;
+  }
+
+  &:focus,
+  &.focus {
+    @include focus-shadow(4px);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: #e4e9ff;
+    color: #967aeb;
+  }
+}
+
+.button.secondary {
+  height: 40px;
+  border-radius: 4px;
+  background-color: #202733;
+
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.35px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+
+  &:hover,
+  &.hover {
+    background-color: #313845;
+  }
+
+  &:active,
+  &.active {
+    background-color: #000000;
+  }
+
+  &:focus,
+  &.focus {
+    @include focus-shadow(2px);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: #c2c0c6;
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: solid 2px #202733;
+    color: #202733;
+
+    &:hover,
+    &.hover {
+      color: #9013fe;
+      border: solid 2px #9013fe;
+    }
+
+    &:active,
+    &.active {
+      border: solid 2px #620faa;
+      color: #620faa;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: #7d868e;
+      border: solid 2px #7d868e;
+    }
+  }
+}
+
+.button.tertiary {
+  border-radius: 24px;
+  background-color: $primary;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+  height: 32px;
+  border: none;
+
+  &:hover,
+  &.hover {
+    background-color: #a034ff;
+  }
+
+  &:active,
+  &.active {
+    background-color: #620faa;
+  }
+
+  &:focus,
+  &.focus {
+    @include focus-shadow(2px);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: #e4e9ff;
+    color: #967aeb;
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: solid 2px #202733;
+    color: #202733;
+
+    &:hover,
+    &.hover {
+      color: #9013fe;
+      border: solid 2px #9013fe;
+    }
+
+    &:active,
+    &.active {
+      border: solid 2px #620faa;
+      color: #620faa;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: #7d868e;
+      border: solid 2px #7d868e;
+    }
+  }
+}
+
+.sqrl-util-spread {
+  > * {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}

@@ -7108,3 +7108,103 @@ p {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal; }
+
+.button.primary {
+  border-radius: 24px;
+  background-color: #9013fe;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 24px;
+  height: 48px;
+  border: none; }
+  .button.primary:hover, .button.primary.hover {
+    background-color: #a034ff; }
+  .button.primary:active, .button.primary.active {
+    background-color: #620faa; }
+  .button.primary:focus, .button.primary.focus {
+    box-shadow: 0 0 0 4px rgba(144, 19, 254, 0.3); }
+  .button.primary:disabled, .button.primary.disabled {
+    background-color: #e4e9ff;
+    color: #967aeb; }
+
+.button.secondary {
+  height: 40px;
+  border-radius: 4px;
+  background-color: #202733;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.35px;
+  text-align: center;
+  color: #ffffff;
+  border: none; }
+  .button.secondary:hover, .button.secondary.hover {
+    background-color: #313845; }
+  .button.secondary:active, .button.secondary.active {
+    background-color: #000000; }
+  .button.secondary:focus, .button.secondary.focus {
+    box-shadow: 0 0 0 2px rgba(144, 19, 254, 0.3); }
+  .button.secondary:disabled, .button.secondary.disabled {
+    background-color: #c2c0c6; }
+  .button.secondary.outline {
+    background-color: transparent;
+    border: solid 2px #202733;
+    color: #202733; }
+    .button.secondary.outline:hover, .button.secondary.outline.hover {
+      color: #9013fe;
+      border: solid 2px #9013fe; }
+    .button.secondary.outline:active, .button.secondary.outline.active {
+      border: solid 2px #620faa;
+      color: #620faa; }
+    .button.secondary.outline:disabled, .button.secondary.outline.disabled {
+      color: #7d868e;
+      border: solid 2px #7d868e; }
+
+.button.tertiary {
+  border-radius: 24px;
+  background-color: #9013fe;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+  height: 32px;
+  border: none; }
+  .button.tertiary:hover, .button.tertiary.hover {
+    background-color: #a034ff; }
+  .button.tertiary:active, .button.tertiary.active {
+    background-color: #620faa; }
+  .button.tertiary:focus, .button.tertiary.focus {
+    box-shadow: 0 0 0 2px rgba(144, 19, 254, 0.3); }
+  .button.tertiary:disabled, .button.tertiary.disabled {
+    background-color: #e4e9ff;
+    color: #967aeb; }
+  .button.tertiary.outline {
+    background-color: transparent;
+    border: solid 2px #202733;
+    color: #202733; }
+    .button.tertiary.outline:hover, .button.tertiary.outline.hover {
+      color: #9013fe;
+      border: solid 2px #9013fe; }
+    .button.tertiary.outline:active, .button.tertiary.outline.active {
+      border: solid 2px #620faa;
+      color: #620faa; }
+    .button.tertiary.outline:disabled, .button.tertiary.outline.disabled {
+      color: #7d868e;
+      border: solid 2px #7d868e; }
+
+.sqrl-util-spread > * {
+  margin-right: 8px;
+  margin-bottom: 8px; }
