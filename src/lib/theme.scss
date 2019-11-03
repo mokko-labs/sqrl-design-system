@@ -1,4 +1,5 @@
 @import './styles/_colors.scss';
+@import './styles/_typography.scss';
 
 $primary: $electric-velvet-700;
 $main-background-color: #fafafa;
@@ -47,29 +48,23 @@ $sqrl-input-left: 16px;
 }
 
 h1 {
-  font-weight: $weight-bold;
-  font-size: 40px;
+  @include typography-h1();
 }
 
 h2 {
-  font-weight: $weight-bold;
-  font-size: 32px;
+  @include typography-h2();
 }
 
 h3 {
-  font-weight: $weight-semibold;
-  font-size: 20px;
-  line-height: 40px;
+  @include typography-h3();
 }
 
 h4 {
-  font-weight: $weight-medium;
-  font-size: 20px;
-  line-height: 40px;
+  @include typography-h4();
 }
 
 p {
-  font-size: 14px;
+  @include typography-body();
 }
 
 .typography.medium {

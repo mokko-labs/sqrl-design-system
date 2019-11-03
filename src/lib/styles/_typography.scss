@@ -1,0 +1,75 @@
+@mixin typography-h1 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1.25px;
+  color: $cold-knight-800;
+}
+
+@mixin typography-h2 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: $cold-knight-800;
+}
+
+@mixin typography-h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  color: $cold-knight-800;
+}
+
+@mixin typography-h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #00071e;
+}
+
+@mixin typography-h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #00071e;
+}
+
+@mixin typography-regular {
+  font-family: WorkSans;
+  font-size: 16px;
+  font-weight: 500;
+  color: $cold-knight-800;
+}
+
+@mixin typography-h6 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29;
+  color: $cold-knight-800;
+}
+
+@mixin typography-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: $cold-knight-600;
+}
+
+@mixin typography-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: $cold-knight-800;
+}
+
+@mixin typography-body {
+  font-size: 12px;
+  line-height: 1.5;
+  color: $cold-knight-600;
+}
+
+@mixin typography-caption {
+  font-size: 10px;
+  color: $cold-knight-700;
+}
