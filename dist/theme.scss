@@ -1,4 +1,6 @@
-$primary: #9013fe;
+@import './styles/_colors.scss';
+
+$primary: $electric-velvet-700;
 $main-background-color: #fafafa;
 $alt-background-color: #fafbfd;
 
@@ -261,7 +263,7 @@ p {
 
   &:active,
   &.active {
-    background-color: #620faa;
+    background-color: $electric-velvet-800;
   }
 
   &:focus,
@@ -279,7 +281,7 @@ p {
 .button.secondary {
   height: 40px;
   border-radius: 4px;
-  background-color: #202733;
+  background-color: $cold-knight-800;
 
   font-size: 14px;
   font-weight: 600;
@@ -298,7 +300,7 @@ p {
 
   &:active,
   &.active {
-    background-color: #000000;
+    background-color: $pure-black-900;
   }
 
   &:focus,
