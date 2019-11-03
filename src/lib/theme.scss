@@ -1,4 +1,6 @@
-$primary: #9013fe;
+@import './styles/_colors.scss';
+
+$primary: $electric-velvet-700;
 $main-background-color: #fafafa;
 $alt-background-color: #fafbfd;
 
@@ -261,7 +263,7 @@ p {
 
   &:active,
   &.active {
-    background-color: #620faa;
+    background-color: $electric-velvet-800;
   }
 
   &:focus,

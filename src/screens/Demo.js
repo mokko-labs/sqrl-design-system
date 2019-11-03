@@ -5,6 +5,7 @@ import {
   Box,
   CustomInput,
   Button,
+  PrimaryButton,
   Switch,
   InPlaceNotification,
   FlatLogo,
@@ -283,9 +284,7 @@ const SignupForm = () => (
             label="Agreement text goes here"
           />
 
-          <Button isColor="primary" className="is-rounded" type="submit">
-            Try 1 Month Free
-          </Button>
+          <PrimaryButton type="submit">Try 1 Month Free</PrimaryButton>
         </form>
       )}
     />
@@ -317,9 +316,7 @@ class DemoPage extends React.Component {
 
             <CustomInput label="Name" type="text" />
 
-            <Button isColor="primary" className="is-rounded">
-              Hello
-            </Button>
+            <PrimaryButton>Hello</PrimaryButton>
 
             <div className="buttons has-addons" style={{ marginTop: 24 }}>
               <Button>Personal</Button>
