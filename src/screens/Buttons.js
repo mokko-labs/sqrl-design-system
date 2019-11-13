@@ -24,6 +24,7 @@ export default () => (
         <PrimaryButton className="focus">Get Started</PrimaryButton>
         <PrimaryButton className="hover focus">Get Started</PrimaryButton>
         <PrimaryButton className="active focus">Get Started</PrimaryButton>
+        <PrimaryButton busy>Get Started</PrimaryButton>
       </div>
 
       <hr />
@@ -37,6 +38,7 @@ export default () => (
         <SecondaryButton className="focus">Get Started</SecondaryButton>
         <SecondaryButton className="hover focus">Get Started</SecondaryButton>
         <SecondaryButton className="active focus">Get Started</SecondaryButton>
+        <SecondaryButton busy>Get Started</SecondaryButton>
       </div>
 
       <hr />

@@ -13,7 +13,8 @@ import {
   Label,
   Checkbox,
   Field as FormField,
-  CustomSelect
+  CustomSelect,
+  Loader
 } from '../lib'
 import * as Yup from 'yup'
 import { Field, Formik } from 'formik'
@@ -312,11 +313,18 @@ class DemoPage extends React.Component {
       <Section>
         <Container>
           <Box>
+            <h1>Loader</h1>
+            <div>
+              <Loader className="small" />
+            </div>
+          </Box>
+          <Box>
             <h1>Hello</h1>
 
             <CustomInput label="Name" type="text" />
 
             <PrimaryButton>Hello</PrimaryButton>
+            <PrimaryButton busy>Hello</PrimaryButton>
 
             <div className="buttons has-addons" style={{ marginTop: 24 }}>
               <Button>Personal</Button>
