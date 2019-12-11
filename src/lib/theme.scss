@@ -63,8 +63,36 @@ h4 {
   @include typography-h4();
 }
 
+h5 {
+  @include typography-h5();
+}
+
+h6 {
+  @include typography-h6();
+}
+
+p.lead {
+  @include typography-lead();
+}
+
 p {
   @include typography-body();
+}
+
+p.large-body {
+  @include typography-large-body();
+}
+
+p.subtitle {
+  @include typography-subtitle();
+}
+
+p.label {
+  @include typography-label();
+}
+
+p.caption {
+  @include typography-caption();
 }
 
 .typography.medium {

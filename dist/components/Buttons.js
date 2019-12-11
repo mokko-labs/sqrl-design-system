@@ -2,18 +2,31 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { Button } from 'bloomer';
+import Loader from './Loader';
 export const PrimaryButton = ({
   className,
+  busy,
+  children,
   ...rest
-}) => React.createElement(Button, _extends({
-  className: `primary ${className}`
-}, rest));
+}) => {
+  return React.createElement(Button, _extends({
+    className: `primary ${className} ${busy ? 'busy' : null}`
+  }, rest), busy && React.createElement(Loader, {
+    color: "white"
+  }), !busy && children);
+};
 export const SecondaryButton = ({
   className,
+  busy,
+  children,
   ...rest
-}) => React.createElement(Button, _extends({
-  className: `secondary ${className}`
-}, rest));
+}) => {
+  return React.createElement(Button, _extends({
+    className: `secondary ${className} ${busy ? 'busy' : null}`
+  }, rest), busy && React.createElement(Loader, {
+    color: "white"
+  }), !busy && children);
+};
 export const TertiaryButton = ({
   className,
   ...rest

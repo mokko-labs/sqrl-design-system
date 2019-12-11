@@ -1,0 +1,25 @@
+@import './lib/theme';
+
+.showtime {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label {
+    margin-bottom: 40px;
+  }
+}
+
+p.meta {
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  color: $neon-blue-600;
+  text-transform: uppercase;
+}

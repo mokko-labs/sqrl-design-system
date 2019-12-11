@@ -6972,25 +6972,78 @@ label.panel-block {
   border: 1px solid #e2eaf8; }
 
 h1 {
-  font-weight: 700;
-  font-size: 40px; }
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1.25px;
+  color: #202733; }
 
 h2 {
-  font-weight: 700;
-  font-size: 32px; }
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #202733; }
 
 h3 {
+  font-size: 24px;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 40px; }
+  line-height: 1.33;
+  color: #202733; }
 
 h4 {
-  font-weight: 500;
   font-size: 20px;
-  line-height: 40px; }
+  font-weight: 500;
+  line-height: 1.2;
+  color: #00071e; }
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #00071e; }
+
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29;
+  color: #202733; }
+
+p.lead {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  color: #202733; }
 
 p {
-  font-size: 14px; }
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000000; }
+
+p.large-body {
+  font-size: 14px;
+  line-height: 1.57;
+  color: #000000; }
+
+p.subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: #202733; }
+
+p.label {
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000; }
+
+p.caption {
+  font-size: 10px;
+  color: #000000; }
 
 .typography.medium {
   font-weight: 500; }
@@ -7122,7 +7175,10 @@ p {
   color: #ffffff;
   padding: 0 24px;
   height: 48px;
-  border: none; }
+  border: none;
+  min-width: 128px; }
+  .button.primary.busy {
+    pointer-events: none; }
   .button.primary:hover, .button.primary.hover {
     background-color: #a034ff; }
   .button.primary:active, .button.primary.active {
@@ -7146,6 +7202,8 @@ p {
   text-align: center;
   color: #ffffff;
   border: none; }
+  .button.secondary.busy {
+    pointer-events: none; }
   .button.secondary:hover, .button.secondary.hover {
     background-color: #313845; }
   .button.secondary:active, .button.secondary.active {
@@ -7208,3 +7266,35 @@ p {
 .sqrl-util-spread > * {
   margin-right: 8px;
   margin-bottom: 8px; }
+
+/*Thank you Daniel Morosan*/
+/*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
+.spinner {
+  margin: auto 0;
+  text-align: center; }
+  .spinner.small > div {
+    width: 8px;
+    height: 8px;
+    margin: 0 2px; }
+  .spinner > div {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background-color: #9013fe;
+    border-radius: 100%;
+    display: inline-block;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s; }
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s; }
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    opacity: 0.2; }
+  40% {
+    opacity: 1; } }
