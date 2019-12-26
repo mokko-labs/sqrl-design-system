@@ -7162,6 +7162,11 @@ p.caption {
   line-height: normal;
   letter-spacing: normal; }
 
+.button.flat, .button.flat:hover, .button.flat.hover, .button.flat:active, .button.flat.active, .button.flat:focus, .button.flat.focus {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
 .button.primary {
   border-radius: 24px;
   background-color: #9013fe;

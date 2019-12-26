@@ -33,3 +33,6 @@ export const TertiaryButton = ({
 }) => React.createElement(Button, _extends({
   className: `tertiary ${className}`
 }, rest));
+export const FlatButton = props => React.createElement(Button, _extends({
+  className: 'flat'
+}, props));

@@ -264,6 +264,12 @@ p.caption {
   box-shadow: 0 0 0 $size transparentize($primary, 0.7);
 }
 
+%no-boundary {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
 .button.primary {
   border-radius: 24px;
   background-color: $primary;
@@ -428,6 +434,25 @@ p.caption {
       color: #7d868e;
       border: solid 2px #7d868e;
     }
+  }
+}
+
+.button.flat {
+  @extend %no-boundary;
+
+  &:hover,
+  &.hover {
+    @extend %no-boundary;
+  }
+
+  &:active,
+  &.active {
+    @extend %no-boundary;
+  }
+
+  &:focus,
+  &.focus {
+    @extend %no-boundary;
   }
 }
 
