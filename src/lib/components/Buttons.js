@@ -29,3 +29,5 @@ export const SecondaryButton = ({ className, busy, children, ...rest }) => {
 export const TertiaryButton = ({ className, ...rest }) => (
   <Button className={`tertiary ${className}`} {...rest} />
 )
+
+export const FlatButton = props => <Button className={'flat'} {...props} />

@@ -4,7 +4,8 @@ import {
   SecondaryButton,
   TertiaryButton,
   Section,
-  Container
+  Container,
+  FlatButton
 } from '../lib'
 
 export default () => (
@@ -25,6 +26,19 @@ export default () => (
         <PrimaryButton className="hover focus">Get Started</PrimaryButton>
         <PrimaryButton className="active focus">Get Started</PrimaryButton>
         <PrimaryButton busy>Get Started</PrimaryButton>
+      </div>
+
+      <hr />
+      <h2>Flat Button</h2>
+      <div className="sqrl-util-spread">
+        <FlatButton
+          onClick={() => {
+            alert('Flat button clicked!!')
+          }}
+        >
+          Cancel
+        </FlatButton>
+        <FlatButton disabled>Cancel</FlatButton>
       </div>
 
       <hr />
