@@ -2,10 +2,12 @@ import React from 'react'
 import { Button } from 'bloomer'
 import Loader from './Loader'
 
-export const PrimaryButton = ({ className, busy, children, ...rest }) => {
+export const PrimaryButton = ({ className, busy, children, text, ...rest }) => {
   return (
     <Button
-      className={`primary ${className} ${busy ? 'busy' : null}`}
+      className={`primary ${className} ${busy ? 'busy' : null} ${
+        text ? 'text' : null
+      }`}
       {...rest}
     >
       {busy && <Loader color="white" />}

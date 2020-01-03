@@ -28,6 +28,32 @@ export default () => (
         <PrimaryButton busy>Get Started</PrimaryButton>
       </div>
 
+      <div className="sqrl-util-spread">
+        <PrimaryButton text>Get Started</PrimaryButton>
+        <PrimaryButton text className="hover">
+          Get Started
+        </PrimaryButton>
+        <PrimaryButton text className="active">
+          Get Started
+        </PrimaryButton>
+        <PrimaryButton text disabled>
+          Get Started
+        </PrimaryButton>
+
+        <PrimaryButton text className="focus">
+          Get Started
+        </PrimaryButton>
+        <PrimaryButton text className="hover focus">
+          Get Started
+        </PrimaryButton>
+        <PrimaryButton text className="active focus">
+          Get Started
+        </PrimaryButton>
+        <PrimaryButton text busy>
+          Get Started
+        </PrimaryButton>
+      </div>
+
       <hr />
       <h2>Flat Button</h2>
       <div className="sqrl-util-spread">
