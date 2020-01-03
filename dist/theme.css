@@ -7182,6 +7182,21 @@ p.caption {
   height: 48px;
   border: none;
   min-width: 128px; }
+  .button.primary.text {
+    background-color: transparent;
+    color: #202733; }
+    .button.primary.text:hover, .button.primary.text.hover {
+      color: #9013fe;
+      background-color: transparent; }
+    .button.primary.text:active, .button.primary.text.active {
+      color: #9013fe;
+      background-color: transparent; }
+    .button.primary.text:disabled, .button.primary.text.disabled {
+      color: #7d868e;
+      background-color: transparent; }
+    .button.primary.text.busy {
+      pointer-events: none;
+      background-color: #f0f0f0; }
   .button.primary.busy {
     pointer-events: none; }
   .button.primary:hover, .button.primary.hover {

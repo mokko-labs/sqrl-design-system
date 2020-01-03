@@ -7,10 +7,11 @@ export const PrimaryButton = ({
   className,
   busy,
   children,
+  text,
   ...rest
 }) => {
   return React.createElement(Button, _extends({
-    className: `primary ${className} ${busy ? 'busy' : null}`
+    className: `primary ${className} ${busy ? 'busy' : null} ${text ? 'text' : null}`
   }, rest), busy && React.createElement(Loader, {
     color: "white"
   }), !busy && children);
@@ -19,19 +20,21 @@ export const SecondaryButton = ({
   className,
   busy,
   children,
+  outline,
   ...rest
 }) => {
   return React.createElement(Button, _extends({
-    className: `secondary ${className} ${busy ? 'busy' : null}`
+    className: `secondary ${className} ${busy ? 'busy' : null} ${outline ? 'outline' : null}`
   }, rest), busy && React.createElement(Loader, {
     color: "white"
   }), !busy && children);
 };
 export const TertiaryButton = ({
   className,
+  outline,
   ...rest
 }) => React.createElement(Button, _extends({
-  className: `tertiary ${className}`
+  className: `tertiary ${className} ${outline ? 'outline' : null}`
 }, rest));
 export const FlatButton = props => React.createElement(Button, _extends({
   className: 'flat'
