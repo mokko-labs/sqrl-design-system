@@ -28,6 +28,9 @@ export default () => (
         <PrimaryButton busy>Get Started</PrimaryButton>
       </div>
 
+      <hr />
+
+      <h2>Primary Button (Text)</h2>
       <div className="sqrl-util-spread">
         <PrimaryButton text>Get Started</PrimaryButton>
         <PrimaryButton text className="hover">
@@ -84,20 +87,24 @@ export default () => (
       <hr />
       <h2>Secondary Button (Stroke / Outline)</h2>
       <div className="sqrl-util-spread">
-        <SecondaryButton className="outline">Get Started</SecondaryButton>
-        <SecondaryButton className="outline hover">Get Started</SecondaryButton>
-        <SecondaryButton className="outline active">
+        <SecondaryButton outline>Get Started</SecondaryButton>
+        <SecondaryButton outline className="hover">
           Get Started
         </SecondaryButton>
-        <SecondaryButton className="outline" disabled>
+        <SecondaryButton outline className="active">
+          Get Started
+        </SecondaryButton>
+        <SecondaryButton outline disabled>
           Get Started
         </SecondaryButton>
 
-        <SecondaryButton className="outline focus">Get Started</SecondaryButton>
-        <SecondaryButton className="outline hover focus">
+        <SecondaryButton outline className="focus">
           Get Started
         </SecondaryButton>
-        <SecondaryButton className="outline active focus">
+        <SecondaryButton outline className="hover focus">
+          Get Started
+        </SecondaryButton>
+        <SecondaryButton outline className="active focus">
           Get Started
         </SecondaryButton>
       </div>
@@ -118,18 +125,24 @@ export default () => (
       <hr />
       <h2>Tertiary Button (Stroke / Outline)</h2>
       <div className="sqrl-util-spread">
-        <TertiaryButton className="outline">Get Started</TertiaryButton>
-        <TertiaryButton className="outline hover">Get Started</TertiaryButton>
-        <TertiaryButton className="outline active">Get Started</TertiaryButton>
-        <TertiaryButton className="outline" disabled>
+        <TertiaryButton outline>Get Started</TertiaryButton>
+        <TertiaryButton outline className="hover">
+          Get Started
+        </TertiaryButton>
+        <TertiaryButton outline className="active">
+          Get Started
+        </TertiaryButton>
+        <TertiaryButton outline disabled>
           Get Started
         </TertiaryButton>
 
-        <TertiaryButton className="outline focus">Get Started</TertiaryButton>
-        <TertiaryButton className="outline hover focus">
+        <TertiaryButton outline className="focus">
           Get Started
         </TertiaryButton>
-        <TertiaryButton className="outline active focus">
+        <TertiaryButton outline className="hover focus">
+          Get Started
+        </TertiaryButton>
+        <TertiaryButton outline className="active focus">
           Get Started
         </TertiaryButton>
       </div>

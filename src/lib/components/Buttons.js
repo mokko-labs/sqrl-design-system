@@ -16,10 +16,18 @@ export const PrimaryButton = ({ className, busy, children, text, ...rest }) => {
   )
 }
 
-export const SecondaryButton = ({ className, busy, children, ...rest }) => {
+export const SecondaryButton = ({
+  className,
+  busy,
+  children,
+  outline,
+  ...rest
+}) => {
   return (
     <Button
-      className={`secondary ${className} ${busy ? 'busy' : null}`}
+      className={`secondary ${className} ${busy ? 'busy' : null} ${
+        outline ? 'outline' : null
+      }`}
       {...rest}
     >
       {busy && <Loader color="white" />}
@@ -28,8 +36,11 @@ export const SecondaryButton = ({ className, busy, children, ...rest }) => {
   )
 }
 
-export const TertiaryButton = ({ className, ...rest }) => (
-  <Button className={`tertiary ${className}`} {...rest} />
+export const TertiaryButton = ({ className, outline, ...rest }) => (
+  <Button
+    className={`tertiary ${className} ${outline ? 'outline' : null}`}
+    {...rest}
+  />
 )
 
 export const FlatButton = props => <Button className={'flat'} {...props} />
