@@ -269,7 +269,13 @@ const SignupForm = () => (
             label="Agreement text goes here"
           />
 
-          <PrimaryButton type="submit">Try 1 Month Free</PrimaryButton>
+          <PrimaryButton type="submit" style={{ marginRight: 16 }}>
+            Try 1 Month Free
+          </PrimaryButton>
+
+          <PrimaryButton type="button" onClick={() => props.resetForm()}>
+            Reset Form
+          </PrimaryButton>
         </form>
       )}
     />
@@ -307,7 +313,7 @@ class DemoPage extends React.Component {
 
             <CustomInput label="Name" type="text" />
 
-            <PrimaryButton>Hello</PrimaryButton>
+            <PrimaryButton style={{ marginRight: 16 }}>Hello</PrimaryButton>
             <PrimaryButton busy>Hello</PrimaryButton>
 
             <div className="buttons has-addons" style={{ marginTop: 24 }}>

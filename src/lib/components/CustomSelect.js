@@ -35,7 +35,7 @@ class CustomInput extends React.Component {
     const state = this.state
 
     const hasFocus = state.focus
-    const value = (rest && rest.value) || state.value
+    const value = (rest && rest.value) || state.value || ''
     const hasValue = value && value.length > 0
 
     const shouldFloat = value || hasFocus

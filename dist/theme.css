@@ -7062,7 +7062,8 @@ p.caption {
   width: 100%;
   height: 56px;
   background-color: rgba(0, 0, 0, 0.097);
-  margin-bottom: 28px; }
+  margin-bottom: 28px;
+  overflow: hidden; }
   .sqrl-input.focus, .sqrl-input.value {
     border-radius: 4px 4px 0 0; }
   .sqrl-input .label {
@@ -7119,13 +7120,14 @@ p.caption {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    height: 40px;
+    height: 56px;
     border: none;
     box-shadow: none;
     border-radius: 0;
     background-color: transparent;
     border-bottom: 2px solid transparent;
     padding: 10px 16px;
+    padding-top: 26px;
     font-size: 16.9px;
     font-weight: normal;
     font-style: normal;
@@ -7145,9 +7147,7 @@ p.caption {
   .sqrl-input select:-webkit-autofill,
   .sqrl-input select:-webkit-autofill:hover,
   .sqrl-input select:-webkit-autofill:focus {
-    border-bottom: 2px solid #555;
-    -webkit-text-fill-color: black;
-    -webkit-box-shadow: 0 0 0px 1000px #eee inset; }
+    border-bottom: 2px solid #555; }
 
 .buttons.has-addons .button {
   border-radius: 8px;
