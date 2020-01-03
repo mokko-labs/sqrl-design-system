@@ -136,8 +136,8 @@ const SignupSchema = Yup.object().shape({
     .min(4, 'Employer name too small')
     .max(50, 'Employer name too big'),
   state: Yup.string().required('State is required'),
-  jobDesc: Yup.string().required('Job desciption is required'),
-  employeeCount: Yup.string().required('Number of Employees is required'),
+  //  jobDesc: Yup.string().required('Job desciption is required'),
+  //employeeCount: Yup.string().required('Number of Employees is required'),
   agreement: Yup.bool().oneOf([true], 'You must agree to T&C')
 })
 
@@ -150,16 +150,6 @@ const SignupForm = () => (
       validationSchema={SignupSchema}
       onSubmit={(values, { setSubmitting }) => {
         console.log(values)
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode({ 'form-name': 'signup', ...values })
-        })
-          .then(() => {
-            alert('Success!')
-            setSubmitting(false)
-          })
-          .catch(error => alert(error))
       }}
       render={props => (
         <form
