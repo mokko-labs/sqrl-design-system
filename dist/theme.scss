@@ -493,6 +493,36 @@ p.caption {
   }
 }
 
+button.delete {
+  height: 32px;
+  width: 32px;
+  max-width: 32px;
+  min-width: 32px;
+  max-height: 32px;
+  min-height: 32px;
+  background-color: transparent;
+  border: 2px solid black;
+
+  &::before,
+  &:after {
+    background-color: black;
+  }
+
+  &::before {
+    height: 3px;
+  }
+
+  &::after {
+    width: 3px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+  }
+}
+
 // Loader.
 
 /*Thank you Daniel Morosan*/
