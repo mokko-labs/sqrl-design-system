@@ -7337,17 +7337,18 @@ button.delete {
   margin-top: 8px; }
 
 .pill {
-  border-radius: 12px;
-  background-color: #ebeaec;
-  height: 24px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  color: #000000;
+  border-radius: 12px;
+  background-color: #ebeaec;
+  height: 24px;
   text-align: center;
-  color: #202733;
+  color: #7d868e;
   display: flex;
   justify-content: center;
   align-items: center;

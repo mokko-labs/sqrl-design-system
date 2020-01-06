@@ -571,17 +571,13 @@ button.delete {
 }
 
 .pill {
+  @include typography-label();
+
   border-radius: 12px;
-  background-color: #ebeaec;
+  background-color: $cold-knight-250;
   height: 24px;
-  font-size: 14px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: center;
-  color: $cold-knight-800;
+  color: $cold-knight-600;
   display: flex;
   justify-content: center;
   align-items: center;
