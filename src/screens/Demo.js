@@ -14,7 +14,8 @@ import {
   Checkbox,
   Field as FormField,
   CustomSelect,
-  Loader
+  Loader,
+  StyledLine
 } from '../lib'
 import * as Yup from 'yup'
 import { Field, Formik } from 'formik'
@@ -304,6 +305,7 @@ class DemoPage extends React.Component {
         <Container>
           <Box>
             <h1>Loader</h1>
+            <StyledLine />
             <div>
               <Loader className="small" />
             </div>
