@@ -7269,6 +7269,21 @@ p.caption {
   .button.tertiary:disabled, .button.tertiary.disabled {
     background-color: #e4e9ff;
     color: #967aeb; }
+  .button.tertiary.text {
+    background-color: transparent;
+    color: #202733; }
+    .button.tertiary.text:hover, .button.tertiary.text.hover {
+      color: #9013fe;
+      background-color: transparent; }
+    .button.tertiary.text:active, .button.tertiary.text.active {
+      color: #9013fe;
+      background-color: transparent; }
+    .button.tertiary.text:disabled, .button.tertiary.text.disabled {
+      color: #7d868e;
+      background-color: transparent; }
+    .button.tertiary.text.busy {
+      pointer-events: none;
+      background-color: #f0f0f0; }
   .button.tertiary.outline {
     background-color: transparent;
     border: solid 2px #202733;

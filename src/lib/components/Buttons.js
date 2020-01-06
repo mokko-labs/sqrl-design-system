@@ -36,9 +36,11 @@ export const SecondaryButton = ({
   )
 }
 
-export const TertiaryButton = ({ className, outline, ...rest }) => (
+export const TertiaryButton = ({ className, outline, text, ...rest }) => (
   <Button
-    className={`tertiary ${className} ${outline ? 'outline' : null}`}
+    className={`tertiary ${className} ${outline ? 'outline' : null} ${
+      text ? 'text' : null
+    }`}
     {...rest}
   />
 )

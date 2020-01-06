@@ -442,6 +442,34 @@ p.caption {
     color: #967aeb;
   }
 
+  &.text {
+    background-color: transparent;
+    color: $cold-knight-800;
+
+    &:hover,
+    &.hover {
+      color: $electric-velvet-700;
+      background-color: transparent;
+    }
+
+    &:active,
+    &.active {
+      color: $electric-velvet-700;
+      background-color: transparent;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: $cold-knight-600;
+      background-color: transparent;
+    }
+
+    &.busy {
+      pointer-events: none;
+      background-color: #f0f0f0;
+    }
+  }
+
   &.outline {
     background-color: transparent;
     border: solid 2px $cold-knight-800;
