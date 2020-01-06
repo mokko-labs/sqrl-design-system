@@ -7287,6 +7287,24 @@ p.caption {
   margin-right: 8px;
   margin-bottom: 8px; }
 
+button.delete {
+  height: 32px;
+  width: 32px;
+  max-width: 32px;
+  min-width: 32px;
+  max-height: 32px;
+  min-height: 32px;
+  background-color: transparent;
+  border: 2px solid black; }
+  button.delete::before, button.delete:after {
+    background-color: black; }
+  button.delete::before {
+    height: 3px; }
+  button.delete::after {
+    width: 3px; }
+  button.delete:hover, button.delete:focus, button.delete:active {
+    background-color: transparent; }
+
 /*Thank you Daniel Morosan*/
 /*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
 .spinner {
