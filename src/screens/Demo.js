@@ -15,7 +15,8 @@ import {
   Field as FormField,
   CustomSelect,
   Loader,
-  StyledLine
+  StyledLine,
+  Slider
 } from '../lib'
 import * as Yup from 'yup'
 import { Field, Formik } from 'formik'
@@ -324,6 +325,9 @@ class DemoPage extends React.Component {
               <Button>Payment</Button>
             </div>
 
+            <div>
+              <Slider />
+            </div>
             <div>
               <Switch
                 onChange={this.switchChanged}

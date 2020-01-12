@@ -7351,6 +7351,43 @@ button.delete {
   margin-bottom: 8px;
   margin-top: 8px; }
 
+.sqrl-horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 48px; }
+
+.sqrl-thumb {
+  font-size: 0.9em;
+  text-align: center;
+  background-color: #9013fe;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box; }
+
+.sqrl-thumb.active {
+  background-color: #9013fe; }
+
+.sqrl-track {
+  position: relative;
+  background: #9013fe; }
+
+.sqrl-track.sqrl-track-1 {
+  opacity: 0.14;
+  background-color: #8e13fa; }
+
+.sqrl-track.sqrl-track-2 {
+  background: #0f0; }
+
+.sqrl-horizontal-slider .sqrl-track {
+  top: 23px;
+  height: 2px; }
+
+.sqrl-horizontal-slider .sqrl-thumb {
+  top: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px; }
+
 .pill {
   font-size: 12px;
   font-weight: 600;
