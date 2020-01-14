@@ -4,14 +4,12 @@ import {
   Container,
   Box,
   CustomInput,
+  CustomCheckbox,
   Button,
   PrimaryButton,
   Switch,
   InPlaceNotification,
   FlatLogo,
-  Control,
-  Label,
-  Checkbox,
   Field as FormField,
   CustomSelect,
   Loader,
@@ -101,15 +99,8 @@ let states = {
   WY: 'Wyoming'
 }
 
-const RenderCheckbox = ({ label, ...rest }) => {
-  return (
-    <Control {...rest}>
-      <Label className="checkbox">
-        <Checkbox type="checkbox" {...rest.field} />
-        <span style={{ marginLeft: 10 }}>{label}</span>
-      </Label>
-    </Control>
-  )
+const RenderCheckbox = ({ label, field, ...rest }) => {
+  return <CustomCheckbox label={label} {...field} />
 }
 
 const SignupSchema = Yup.object().shape({
@@ -249,6 +240,7 @@ const SignupForm = () => (
 
             <FormField>
               <CustomSelect
+                id="state"
                 label="State"
                 name="state"
                 value={props.values.state}

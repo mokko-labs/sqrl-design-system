@@ -1,27 +1,7 @@
-@import './styles/_colors.scss';
-@import './styles/_typography.scss';
-
-$primary: $electric-velvet-700;
-$main-background-color: #fafafa;
-$alt-background-color: #fafbfd;
-
-$body-background-color: $main-background-color;
-
-$family-sans-serif: 'Work Sans', BlinkMacSystemFont, -apple-system, 'Segoe UI',
-  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-
-$card-shadow: none;
-$box-shadow: none;
-$card-border-radius: 8px;
-$card-border-color: #e2eaf8;
-
-$tag-radius: 2px;
-
-$sqrl-input-left: 16px;
-
+@import './styles/_variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap');
 @import 'bulma-scss/bulma.scss';
+@import './styles/_typography.scss';
 
 /*
 * {
@@ -47,58 +27,6 @@ $sqrl-input-left: 16px;
   border: 1px solid $card-border-color;
 }
 
-h1 {
-  @include typography-h1();
-}
-
-h2 {
-  @include typography-h2();
-}
-
-h3 {
-  @include typography-h3();
-}
-
-h4 {
-  @include typography-h4();
-}
-
-h5 {
-  @include typography-h5();
-}
-
-h6 {
-  @include typography-h6();
-}
-
-p.lead {
-  @include typography-lead();
-}
-
-p {
-  @include typography-body();
-}
-
-p.large-body {
-  @include typography-large-body();
-}
-
-p.subtitle {
-  @include typography-subtitle();
-}
-
-p.label {
-  @include typography-label();
-}
-
-p.caption {
-  @include typography-caption();
-}
-
-.typography.medium {
-  font-weight: $weight-medium;
-}
-
 .button {
   font-weight: $weight-semibold;
 }
@@ -109,140 +37,6 @@ p.caption {
 
 .label .checkbox {
   margin-bottom: 28px;
-}
-
-.sqrl-input {
-  position: relative;
-  width: 100%;
-  height: 56px;
-  background-color: rgba(0, 0, 0, 0.097);
-  margin-bottom: 28px;
-  overflow: hidden;
-
-  &.focus,
-  &.value {
-    border-radius: 4px 4px 0 0;
-  }
-
-  .label {
-    font-size: 16.9px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.42;
-    letter-spacing: 0.15px;
-    color: rgba(0, 0, 0, 0.6);
-
-    position: absolute;
-    transform: translate($sqrl-input-left, 16px);
-    transform-origin: left;
-
-    z-index: 100;
-    transition: transform 250ms ease, font-size 250ms ease;
-    pointer-events: none;
-
-    &.focus {
-      color: $primary;
-    }
-
-    &.floating {
-      font-weight: 500;
-      transform: translate($sqrl-input-left, 4px) scale(0.75);
-    }
-  }
-
-  .select:not(.is-multiple):not(.is-loading)::after,
-  .navbar-link:not(.is-arrowless)::after {
-    margin-top: 0px;
-  }
-
-  .select {
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    height: 50px;
-    width: 100%;
-    position: relative;
-    select {
-      position: relative;
-      top: 20px;
-      width: 100%;
-      font-size: 1em;
-      //height: auto !important;
-      padding: 0px $sqrl-input-left;
-      border: none;
-      border-bottom: 2px solid transparent;
-
-      background-color: transparent;
-      border-radius: 0;
-      &:focus {
-        outline: none;
-        box-shadow: none;
-      }
-    }
-
-    option {
-      font-size: 0.5rem;
-    }
-
-    &.value {
-      select {
-        border-bottom: 2px solid #555;
-      }
-    }
-
-    &:focus {
-      select {
-        border-bottom: 2px solid $primary;
-      }
-    }
-  }
-
-  .input {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 56px;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    background-color: transparent;
-    border-bottom: 2px solid transparent;
-    padding: 10px $sqrl-input-left;
-    padding-top: 26px;
-
-    font-size: 16.9px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    //  line-height: 1.42;
-    letter-spacing: 0.15px;
-    color: rgba(0, 0, 0, 0.87);
-
-    &.value {
-      border-bottom: 2px solid #555;
-    }
-
-    &:focus {
-      border-bottom: 2px solid $primary;
-    }
-  }
-
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  select:-webkit-autofill,
-  select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus {
-    border-bottom: 2px solid #555;
-    //  -webkit-text-fill-color: black;
-    //  -webkit-box-shadow: 0 0 0px 1000px #eee inset;
-  }
 }
 
 .buttons.has-addons {
@@ -598,53 +392,6 @@ button.delete {
   margin-top: 8px;
 }
 
-// Slider
-
-.sqrl-horizontal-slider {
-  width: 100%;
-  max-width: 500px;
-  height: 48px;
-}
-
-.sqrl-thumb {
-  font-size: 0.9em;
-  text-align: center;
-  background-color: $primary;
-  color: white;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.sqrl-thumb.active {
-  background-color: $primary;
-}
-
-.sqrl-track {
-  position: relative;
-  background: $primary;
-}
-
-.sqrl-track.sqrl-track-1 {
-  opacity: 0.14;
-  background-color: #8e13fa;
-}
-
-.sqrl-track.sqrl-track-2 {
-  background: #0f0;
-}
-
-.sqrl-horizontal-slider .sqrl-track {
-  top: 23px;
-  height: 2px;
-}
-
-.sqrl-horizontal-slider .sqrl-thumb {
-  top: 18px;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-}
-
 .pill {
   @include typography-label();
 
@@ -670,3 +417,7 @@ button.delete {
     opacity: 1;
   }
 }
+
+@import './styles/_checkbox.scss';
+@import './styles/_input.scss';
+@import './styles/_slider.scss';

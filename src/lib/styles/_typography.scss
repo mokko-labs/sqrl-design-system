@@ -89,3 +89,55 @@
   font-size: 10px;
   color: $pure-black-900;
 }
+
+h1 {
+  @include typography-h1();
+}
+
+h2 {
+  @include typography-h2();
+}
+
+h3 {
+  @include typography-h3();
+}
+
+h4 {
+  @include typography-h4();
+}
+
+h5 {
+  @include typography-h5();
+}
+
+h6 {
+  @include typography-h6();
+}
+
+p.lead {
+  @include typography-lead();
+}
+
+p {
+  @include typography-body();
+}
+
+p.large-body {
+  @include typography-large-body();
+}
+
+p.subtitle {
+  @include typography-subtitle();
+}
+
+p.label {
+  @include typography-label();
+}
+
+p.caption {
+  @include typography-caption();
+}
+
+.typography.medium {
+  font-weight: medium;
+}

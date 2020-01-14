@@ -2,6 +2,7 @@ export * from 'bloomer';
 export { default as FlatLogo } from './components/FlatLogo';
 export { default as CustomInput } from './components/CustomInput';
 export { default as CustomSelect } from './components/CustomSelect';
+export { default as CustomCheckbox } from './components/CustomCheckbox';
 export { default as Switch } from './components/Switch';
 export { default as Loader } from './components/Loader';
 export { default as StyledLine } from './components/StyledLine';
