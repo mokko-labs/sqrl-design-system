@@ -13,6 +13,6 @@ export default (({
   type: "checkbox",
   id: id || 'checkbox1'
 }, rest)), React.createElement("label", {
-  for: id || 'checkbox1',
+  htmlFor: id || 'checkbox1',
   tabIndex: tabIndex
 }, label)));

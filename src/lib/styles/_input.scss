@@ -40,10 +40,12 @@ $sqrl-input-left: 16px;
     }
   }
 
+  /*
   .select:not(.is-multiple):not(.is-loading)::after,
   .navbar-link:not(.is-arrowless)::after {
-    margin-top: 0px;
+    margin-top: -4px;
   }
+  */
 
   .select {
     border: none;

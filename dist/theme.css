@@ -7048,29 +7048,46 @@ p.caption {
   border-radius: 8px;
   border: 1px solid #e2eaf8; }
 
-.button {
-  font-weight: 600; }
-
 .field {
   margin-bottom: 0px !important; }
-
-.buttons.has-addons .button {
-  border-radius: 8px;
-  border: solid 1px #202733;
-  padding-left: 50px;
-  padding-right: 50px;
-  height: 40px;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal; }
 
 .button.flat, .button.flat:hover, .button.flat.hover, .button.flat:active, .button.flat.active, .button.flat:focus, .button.flat.focus {
   outline: none;
   border: none;
   background-color: transparent; }
+
+.sqrl-util-spread > * {
+  margin-right: 8px;
+  margin-bottom: 8px; }
+
+.styled-line {
+  width: 40px;
+  height: 4px;
+  background-color: #9013fe;
+  margin-bottom: 8px;
+  margin-top: 8px; }
+
+.pill {
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  border-radius: 12px;
+  background-color: #ebeaec;
+  height: 24px;
+  text-align: center;
+  color: #7d868e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.button {
+  font-weight: 600; }
 
 .button.primary {
   border-radius: 24px;
@@ -7203,10 +7220,6 @@ p.caption {
       color: #7d868e;
       border: solid 2px #7d868e; }
 
-.sqrl-util-spread > * {
-  margin-right: 8px;
-  margin-bottom: 8px; }
-
 button.delete {
   height: 32px;
   width: 32px;
@@ -7225,63 +7238,18 @@ button.delete {
   button.delete:hover, button.delete:focus, button.delete:active {
     background-color: transparent; }
 
-/*Thank you Daniel Morosan*/
-/*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
-.spinner {
-  margin: auto 0;
-  text-align: center; }
-  .spinner.small > div {
-    width: 8px;
-    height: 8px;
-    margin: 0 2px; }
-  .spinner > div {
-    width: 12px;
-    height: 12px;
-    margin: 0 4px;
-    background-color: #9013fe;
-    border-radius: 100%;
-    display: inline-block;
-    animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
-  .spinner .bounce1 {
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.32s; }
-  .spinner .bounce2 {
-    -webkit-animation-delay: -0.16s;
-    animation-delay: -0.16s; }
-
-.styled-line {
-  width: 40px;
-  height: 4px;
-  background-color: #9013fe;
-  margin-bottom: 8px;
-  margin-top: 8px; }
-
-.pill {
-  font-size: 12px;
-  font-weight: 600;
-  font-stretch: normal;
+.buttons.has-addons .button {
+  border-radius: 8px;
+  border: solid 1px #202733;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
   font-style: normal;
+  font-stretch: normal;
   line-height: normal;
-  letter-spacing: normal;
-  color: #000000;
-  border-radius: 12px;
-  background-color: #ebeaec;
-  height: 24px;
-  text-align: center;
-  color: #7d868e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 1em;
-  padding-right: 1em; }
-
-@keyframes sk-bouncedelay {
-  0%,
-  80%,
-  100% {
-    opacity: 0.2; }
-  40% {
-    opacity: 1; } }
+  letter-spacing: normal; }
 
 .checkbox {
   position: absolute;
@@ -7355,7 +7323,13 @@ button.delete {
   height: 56px;
   background-color: rgba(0, 0, 0, 0.097);
   margin-bottom: 28px;
-  overflow: hidden; }
+  overflow: hidden;
+  /*
+  .select:not(.is-multiple):not(.is-loading)::after,
+  .navbar-link:not(.is-arrowless)::after {
+    margin-top: -4px;
+  }
+  */ }
   .sqrl-input.focus, .sqrl-input.value {
     border-radius: 4px 4px 0 0; }
   .sqrl-input .label {
@@ -7377,9 +7351,6 @@ button.delete {
     .sqrl-input .label.floating {
       font-weight: 500;
       transform: translate(16px, 4px) scale(0.75); }
-  .sqrl-input .select:not(.is-multiple):not(.is-loading)::after,
-  .sqrl-input .navbar-link:not(.is-arrowless)::after {
-    margin-top: 0px; }
   .sqrl-input .select {
     border: none;
     box-shadow: none;

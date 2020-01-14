@@ -1,0 +1,292 @@
+.button {
+  font-weight: $weight-semibold;
+}
+
+.button.primary {
+  border-radius: 24px;
+  background-color: $primary;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 24px;
+  height: 48px;
+  border: none;
+  min-width: 128px;
+
+  &.text {
+    background-color: transparent;
+    color: $cold-knight-800;
+
+    &:hover,
+    &.hover {
+      color: $electric-velvet-700;
+      background-color: transparent;
+    }
+
+    &:active,
+    &.active {
+      color: $electric-velvet-700;
+      background-color: transparent;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: $cold-knight-600;
+      background-color: transparent;
+    }
+
+    &.busy {
+      pointer-events: none;
+      background-color: #f0f0f0;
+    }
+  }
+
+  &.busy {
+    pointer-events: none;
+  }
+
+  &:hover,
+  &.hover {
+    background-color: #a034ff;
+  }
+
+  &:active,
+  &.active {
+    background-color: $electric-velvet-800;
+  }
+
+  &:focus,
+  &.focus {
+    @include focus-shadow(4px);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: #e4e9ff;
+    color: #967aeb;
+  }
+}
+
+.button.secondary {
+  height: 40px;
+  border-radius: 4px;
+  background-color: $cold-knight-800;
+
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.35px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+
+  &.busy {
+    pointer-events: none;
+  }
+
+  &:hover,
+  &.hover {
+    background-color: #313845;
+  }
+
+  &:active,
+  &.active {
+    background-color: $pure-black-900;
+  }
+
+  &:focus,
+  &.focus {
+    @include focus-shadow(2px);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: #c2c0c6;
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: solid 2px $cold-knight-800;
+    color: $cold-knight-800;
+
+    &:hover,
+    &.hover {
+      color: $electric-velvet-700;
+      border: solid 2px $electric-velvet-700;
+    }
+
+    &:active,
+    &.active {
+      border: solid 2px #620faa;
+      color: #620faa;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: #7d868e;
+      border: solid 2px #7d868e;
+    }
+  }
+}
+
+.button.tertiary {
+  border-radius: 24px;
+  background-color: $primary;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+  height: 32px;
+  border: none;
+
+  &:hover,
+  &.hover {
+    background-color: #a034ff;
+  }
+
+  &:active,
+  &.active {
+    background-color: #620faa;
+  }
+
+  &:focus,
+  &.focus {
+    @include focus-shadow(2px);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: #e4e9ff;
+    color: #967aeb;
+  }
+
+  &.text {
+    background-color: transparent;
+    color: $cold-knight-800;
+
+    &:hover,
+    &.hover {
+      color: $electric-velvet-700;
+      background-color: transparent;
+    }
+
+    &:active,
+    &.active {
+      color: $electric-velvet-700;
+      background-color: transparent;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: $cold-knight-600;
+      background-color: transparent;
+    }
+
+    &.busy {
+      pointer-events: none;
+      background-color: #f0f0f0;
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: solid 2px $cold-knight-800;
+    color: $cold-knight-800;
+
+    &:hover,
+    &.hover {
+      color: $electric-velvet-700;
+      border: solid 2px $electric-velvet-700;
+    }
+
+    &:active,
+    &.active {
+      border: solid 2px #620faa;
+      color: #620faa;
+    }
+
+    &:disabled,
+    &.disabled {
+      color: #7d868e;
+      border: solid 2px #7d868e;
+    }
+  }
+}
+
+.button.flat {
+  @extend %no-boundary;
+
+  &:hover,
+  &.hover {
+    @extend %no-boundary;
+  }
+
+  &:active,
+  &.active {
+    @extend %no-boundary;
+  }
+
+  &:focus,
+  &.focus {
+    @extend %no-boundary;
+  }
+}
+
+button.delete {
+  height: 32px;
+  width: 32px;
+  max-width: 32px;
+  min-width: 32px;
+  max-height: 32px;
+  min-height: 32px;
+  background-color: transparent;
+  border: 2px solid black;
+
+  &::before,
+  &:after {
+    background-color: black;
+  }
+
+  &::before {
+    height: 3px;
+  }
+
+  &::after {
+    width: 3px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.buttons.has-addons {
+  .button {
+    border-radius: 8px;
+    border: solid 1px $cold-knight-800;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+}
