@@ -260,7 +260,30 @@ const SignupForm = () => (
             type="checkbox"
             name="agreement"
             id="agreement"
-            label="Agreement text goes here"
+            label={
+              <>
+                By creating an account, you agree to our SQRL{' '}
+                <a href="/terms-of-use/">Terms of Use</a> and{' '}
+                <a href="/privacy-policy/">Privacy Policy</a>, as well as our
+                partner Dwolla’s{' '}
+                <a
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  href="https://www.dwolla.com/legal/tos/"
+                >
+                  Terms of Service
+                </a>{' '}
+                and{' '}
+                <a
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  href="https://www.dwolla.com/legal/privacy/"
+                >
+                  Privacy Policy
+                </a>
+                .
+              </>
+            }
           />
 
           <PrimaryButton type="submit" style={{ marginRight: 16 }}>

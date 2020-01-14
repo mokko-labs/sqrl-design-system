@@ -7054,9 +7054,6 @@ p.caption {
 .field {
   margin-bottom: 0px !important; }
 
-.label .checkbox {
-  margin-bottom: 28px; }
-
 .buttons.has-addons .button {
   border-radius: 8px;
   border: solid 1px #202733;
@@ -7314,7 +7311,7 @@ button.delete {
       position: absolute;
       display: block;
       left: 0;
-      top: 0;
+      top: 4px;
       content: '';
       background: transparent;
       width: 24px;
@@ -7325,7 +7322,7 @@ button.delete {
     .checkbox + label:after {
       position: absolute;
       display: block;
-      top: 3px;
+      top: 7px;
       left: 8px;
       content: '';
       width: 8px;
@@ -7388,7 +7385,7 @@ button.delete {
     box-shadow: none;
     border-radius: 0;
     padding: 0;
-    height: 50px;
+    height: 56px;
     width: 100%;
     position: relative; }
     .sqrl-input .select select {
