@@ -7,9 +7,9 @@ export default (({
   tabIndex,
   ...rest
 }) => React.createElement("div", {
-  class: "form-checkbox"
+  className: "form-checkbox"
 }, React.createElement("input", _extends({
-  class: "checkbox",
+  className: "checkbox",
   type: "checkbox",
   id: id || 'checkbox1'
 }, rest)), React.createElement("label", {
