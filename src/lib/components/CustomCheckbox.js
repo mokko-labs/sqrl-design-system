@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default ({ label, id, tabIndex, ...rest }) => (
-  <div className="form-checkbox">
+export default ({ label, id, tabIndex, large, ...rest }) => (
+  <div>
     <input
-      className="checkbox"
+      className={`checkbox ${large ? 'large' : null}`}
       type="checkbox"
       id={id || 'checkbox1'}
       {...rest}

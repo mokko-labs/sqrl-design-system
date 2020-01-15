@@ -7260,22 +7260,11 @@ button.delete {
     color: #333;
   }
   */ }
-  .checkbox + label {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
+  .checkbox.large + label {
     padding-left: 34px;
-    font-size: 10px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: 0.4px;
-    color: #879199;
-    margin-top: 0;
     min-height: 24px;
-    margin-bottom: 16px; }
-    .checkbox + label:before {
+    margin-bottom: 24px; }
+    .checkbox.large + label:before {
       position: absolute;
       display: block;
       left: 0;
@@ -7287,7 +7276,7 @@ button.delete {
       box-shadow: inset 0 0 0 1px #cecece;
       border-radius: 4px;
       transition: 200ms ease-in-out all; }
-    .checkbox + label:after {
+    .checkbox.large + label:after {
       position: absolute;
       display: block;
       top: 7px;
@@ -7297,6 +7286,45 @@ button.delete {
       height: 14px;
       border-right: 3px solid transparent;
       border-bottom: 3px solid transparent;
+      transform: rotate(45deg);
+      transition: 200ms ease-in-out all; }
+  .checkbox + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 26px;
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    color: #879199;
+    margin-top: 0;
+    min-height: 16px;
+    margin-bottom: 16px; }
+    .checkbox + label:before {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 4px;
+      content: '';
+      background: transparent;
+      width: 16px;
+      height: 16px;
+      box-shadow: inset 0 0 0 1px #cecece;
+      border-radius: 4px;
+      transition: 200ms ease-in-out all; }
+    .checkbox + label:after {
+      position: absolute;
+      display: block;
+      top: 6.5px;
+      left: 5.5px;
+      content: '';
+      width: 5px;
+      height: 9px;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
       transform: rotate(45deg);
       transition: 200ms ease-in-out all; }
   .checkbox + label:focus {
