@@ -13,26 +13,25 @@
   font-weight: 600;
   border-radius: 4px;
   background-color: #333;
-  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .notification.success {
-  background-color: #00A400;
+  background-color: #00a400;
 }
 
 .notification.error {
-  background-color: #D5505C;
+  background-color: #d5505c;
 }
 
 .notification.warn {
-  background-color: #E5A435;
+  background-color: #e5a435;
 }
 
 .notification.show {
   display: block;
   visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 4.5s;
 }
 
 @-webkit-keyframes fadein {
@@ -57,24 +56,13 @@
   }
 }
 
-@-webkit-keyframes fadeout {
-  from {
-    bottom: 15px;
-    opacity: 1;
-  }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
-}
-
 @keyframes fadeout {
   from {
     bottom: 15px;
     opacity: 1;
   }
   to {
-    bottom: 0;
+    bottom: 15px;
     opacity: 0;
   }
 }
