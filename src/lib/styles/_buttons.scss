@@ -307,6 +307,7 @@ button.delete {
   display: inline;
   padding: 0;
   height: auto;
+  vertical-align: baseline;
 
   &:hover,
   &.hover {
@@ -334,9 +335,15 @@ button.delete {
   display: inline;
   padding: 0;
   height: auto;
+  vertical-align: baseline;
 
   &:hover,
   &.hover {
     color: #0025c6;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $cold-knight-600;
   }
 }

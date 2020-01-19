@@ -153,8 +153,9 @@ export default () => (
       <h2>Text Link</h2>
 
       <div className="sqrl-util-spread">
-        <TextLinkButton>Text Link</TextLinkButton>
-        <TextLinkButton className="hover">Text Link</TextLinkButton>
+        Inline with <TextLinkButton>Text Link</TextLinkButton>
+        Inline with <TextLinkButton className="hover">Text Link</TextLinkButton>
+        Inline with <TextLinkButton disabled>Text Link</TextLinkButton>
       </div>
 
       <hr />
