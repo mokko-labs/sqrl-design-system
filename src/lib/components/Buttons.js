@@ -46,3 +46,11 @@ export const TertiaryButton = ({ className, outline, text, ...rest }) => (
 )
 
 export const FlatButton = props => <Button className={'flat'} {...props} />
+
+export const TextLinkButton = ({ className, ...props }) => (
+  <Button className={`text-link ${className}`} {...props} />
+)
+
+export const TextCapsLinkButton = ({ className, ...props }) => (
+  <Button className={`text-caps-link ${className}`} {...props} />
+)

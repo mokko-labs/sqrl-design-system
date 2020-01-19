@@ -5,7 +5,9 @@ import {
   TertiaryButton,
   Section,
   Container,
-  FlatButton
+  FlatButton,
+  TextLinkButton,
+  TextCapsLinkButton
 } from '../lib'
 
 export default () => (
@@ -146,6 +148,23 @@ export default () => (
           Get Started
         </TertiaryButton>
       </div>
+
+      <hr />
+      <h2>Text Link</h2>
+
+      <div className="sqrl-util-spread">
+        <TextLinkButton>Text Link</TextLinkButton>
+        <TextLinkButton className="hover">Text Link</TextLinkButton>
+      </div>
+
+      <hr />
+      <h2>Text Caps Link</h2>
+      <div className="sqrl-util-spread">
+        <TextCapsLinkButton>Text Link</TextCapsLinkButton>
+        <TextCapsLinkButton className="hover">Text Link</TextCapsLinkButton>
+        <TextCapsLinkButton disabled>Text Link</TextCapsLinkButton>
+      </div>
+
       <br />
     </Container>
   </Section>

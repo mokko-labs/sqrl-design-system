@@ -290,3 +290,47 @@ button.delete {
     letter-spacing: normal;
   }
 }
+
+.button.text-link {
+  background-color: transparent;
+  border: none;
+
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: $neon-blue-700;
+  text-decoration: underline;
+
+  &:hover,
+  &.hover {
+    color: #0025c6;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $cold-knight-600;
+  }
+}
+
+.button.text-caps-link {
+  background-color: transparent;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.35px;
+  color: $neon-blue-700;
+
+  &:hover,
+  &.hover {
+    color: #0025c6;
+  }
+}
