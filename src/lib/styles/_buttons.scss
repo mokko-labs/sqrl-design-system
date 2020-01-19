@@ -136,6 +136,45 @@
   }
 }
 
+.button.secondary-alt {
+  border-radius: 4px;
+  border: solid 1.4px $cold-knight-300;
+  background-color: $snow-white-0;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $cold-knight-800;
+
+  height: 40px;
+
+  &:hover,
+  &.hover {
+    color: $electric-velvet-700;
+  }
+
+  &:active,
+  &.active {
+    border: solid 1.4px $neon-blue-250;
+    background-color: $neon-blue-50;
+    color: $electric-velvet-700;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $cold-knight-450;
+    border: solid 1.4px $cold-knight-300;
+    background-color: $cold-knight-50;
+  }
+
+  &:focus,
+  &.focus {
+    @include focus-shadow(2px);
+  }
+}
+
 .button.tertiary {
   border-radius: 24px;
   background-color: $primary;

@@ -2,6 +2,7 @@ import React from 'react'
 import {
   PrimaryButton,
   SecondaryButton,
+  SecondaryAltButton,
   TertiaryButton,
   Section,
   Container,
@@ -109,6 +110,31 @@ export default () => (
         <SecondaryButton outline className="active focus">
           Get Started
         </SecondaryButton>
+      </div>
+
+      <hr />
+      <h2>Secondary Alt Button</h2>
+      <div className="sqrl-util-spread">
+        <SecondaryAltButton outline>Get Started</SecondaryAltButton>
+        <SecondaryAltButton outline className="hover">
+          Get Started
+        </SecondaryAltButton>
+        <SecondaryAltButton outline className="active">
+          Get Started
+        </SecondaryAltButton>
+        <SecondaryAltButton outline disabled>
+          Get Started
+        </SecondaryAltButton>
+
+        <SecondaryAltButton outline className="focus">
+          Get Started
+        </SecondaryAltButton>
+        <SecondaryAltButton outline className="hover focus">
+          Get Started
+        </SecondaryAltButton>
+        <SecondaryAltButton outline className="active focus">
+          Get Started
+        </SecondaryAltButton>
       </div>
 
       <hr />

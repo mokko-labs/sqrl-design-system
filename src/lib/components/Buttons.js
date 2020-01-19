@@ -36,6 +36,18 @@ export const SecondaryButton = ({
   )
 }
 
+export const SecondaryAltButton = ({ className, busy, children, ...rest }) => {
+  return (
+    <Button
+      className={`secondary-alt ${className} ${busy ? 'busy' : null}`}
+      {...rest}
+    >
+      {busy && <Loader color="white" />}
+      {!busy && children}
+    </Button>
+  )
+}
+
 export const TertiaryButton = ({ className, outline, text, ...rest }) => (
   <Button
     className={`tertiary ${className} ${outline ? 'outline' : null} ${
