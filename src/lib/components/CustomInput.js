@@ -3,7 +3,9 @@ import { Label } from 'bloomer'
 import classNames from 'classnames'
 
 class CustomInput extends React.Component {
-  state = {}
+  state = {
+    inputType: this.props.type
+  }
 
   _onFocus = evt => {
     this.setState({
@@ -31,7 +33,8 @@ class CustomInput extends React.Component {
   }
 
   render() {
-    const { label, innerRef, style, ...rest } = this.props
+    const { label, innerRef, style, type, ...rest } = this.props
+    const { inputType } = this.state
     const state = this.state
 
     const hasFocus = state.focus
@@ -48,6 +51,15 @@ class CustomInput extends React.Component {
         })}
         style={style}
       >
+        {type === 'password' ? (
+          <button
+            onClick={this.togglePasswordVisibility.bind(this)}
+            style={{ zIndex: 100, position: 'absolute', right: 0, top: '40%' }}
+          >
+            Toggle
+          </button>
+        ) : null}
+
         <Label
           className={classNames({ floating: shouldFloat, focus: hasFocus })}
         >
@@ -57,14 +69,24 @@ class CustomInput extends React.Component {
         <input
           onChange={this._onChange}
           {...rest}
+          type={inputType || 'text'}
           value={value || ''}
           ref={innerRef}
           onFocus={this._onFocus}
           onBlur={this._onBlur}
-          className={classNames('input', { value: hasValue })}
+          className={classNames('input', {
+            value: hasValue,
+            password: type === 'password'
+          })}
         />
       </div>
     )
+  }
+
+  togglePasswordVisibility() {
+    this.setState({
+      inputType: this.state.inputType === 'password' ? 'text' : 'password'
+    })
   }
 }
 

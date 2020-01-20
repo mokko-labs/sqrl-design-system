@@ -119,6 +119,10 @@ $sqrl-input-left: 16px;
     &:focus {
       border-bottom: 2px solid $primary;
     }
+
+    &.password {
+      padding-right: 40px;
+    }
   }
 
   input:-webkit-autofill,

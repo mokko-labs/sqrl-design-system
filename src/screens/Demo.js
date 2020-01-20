@@ -331,6 +331,8 @@ class DemoPage extends React.Component {
 
             <CustomInput label="Name" type="text" />
 
+            <CustomInput label="Password" type="password" />
+
             <PrimaryButton style={{ marginRight: 16 }}>Hello</PrimaryButton>
             <PrimaryButton busy>Hello</PrimaryButton>
 
