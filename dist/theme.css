@@ -7168,6 +7168,31 @@ p.caption {
       color: #7d868e;
       border: solid 2px #7d868e; }
 
+.button.secondary-alt {
+  border-radius: 4px;
+  border: solid 1.4px #e1e0e2;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #202733;
+  height: 40px; }
+  .button.secondary-alt:hover, .button.secondary-alt.hover {
+    color: #9013fe; }
+  .button.secondary-alt:active, .button.secondary-alt.active {
+    border: solid 1.4px #e4e9ff;
+    background-color: #f3faff;
+    color: #9013fe; }
+  .button.secondary-alt:disabled, .button.secondary-alt.disabled {
+    color: #c2c0c6;
+    border: solid 1.4px #e1e0e2;
+    background-color: #f6f6fb; }
+  .button.secondary-alt:focus, .button.secondary-alt.focus {
+    box-shadow: 0 0 0 2px rgba(144, 19, 254, 0.3); }
+
 .button.tertiary {
   border-radius: 24px;
   background-color: #9013fe;
@@ -7250,6 +7275,47 @@ button.delete {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal; }
+
+.button.text-link {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #0030ff;
+  text-decoration: underline;
+  display: inline;
+  padding: 0;
+  height: auto;
+  vertical-align: baseline; }
+  .button.text-link:hover, .button.text-link.hover {
+    color: #0025c6; }
+  .button.text-link:disabled, .button.text-link.disabled {
+    color: #7d868e; }
+
+.button.text-caps-link {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.35px;
+  color: #0030ff;
+  display: inline;
+  padding: 0;
+  height: auto;
+  vertical-align: baseline; }
+  .button.text-caps-link:hover, .button.text-caps-link.hover {
+    color: #0025c6; }
+  .button.text-caps-link:disabled, .button.text-caps-link.disabled {
+    color: #7d868e; }
 
 .checkbox {
   position: absolute;

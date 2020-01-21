@@ -2,10 +2,13 @@ import React from 'react'
 import {
   PrimaryButton,
   SecondaryButton,
+  SecondaryAltButton,
   TertiaryButton,
   Section,
   Container,
-  FlatButton
+  FlatButton,
+  TextLinkButton,
+  TextCapsLinkButton
 } from '../lib'
 
 export default () => (
@@ -110,6 +113,31 @@ export default () => (
       </div>
 
       <hr />
+      <h2>Secondary Alt Button</h2>
+      <div className="sqrl-util-spread">
+        <SecondaryAltButton outline>Get Started</SecondaryAltButton>
+        <SecondaryAltButton outline className="hover">
+          Get Started
+        </SecondaryAltButton>
+        <SecondaryAltButton outline className="active">
+          Get Started
+        </SecondaryAltButton>
+        <SecondaryAltButton outline disabled>
+          Get Started
+        </SecondaryAltButton>
+
+        <SecondaryAltButton outline className="focus">
+          Get Started
+        </SecondaryAltButton>
+        <SecondaryAltButton outline className="hover focus">
+          Get Started
+        </SecondaryAltButton>
+        <SecondaryAltButton outline className="active focus">
+          Get Started
+        </SecondaryAltButton>
+      </div>
+
+      <hr />
       <h2>Tertiary Button</h2>
       <div className="sqrl-util-spread">
         <TertiaryButton>Get Started</TertiaryButton>
@@ -146,6 +174,24 @@ export default () => (
           Get Started
         </TertiaryButton>
       </div>
+
+      <hr />
+      <h2>Text Link</h2>
+
+      <div className="sqrl-util-spread">
+        Inline with <TextLinkButton>Text Link</TextLinkButton>
+        Inline with <TextLinkButton className="hover">Text Link</TextLinkButton>
+        Inline with <TextLinkButton disabled>Text Link</TextLinkButton>
+      </div>
+
+      <hr />
+      <h2>Text Caps Link</h2>
+      <div className="sqrl-util-spread">
+        <TextCapsLinkButton>Text Link</TextCapsLinkButton>
+        <TextCapsLinkButton className="hover">Text Link</TextCapsLinkButton>
+        <TextCapsLinkButton disabled>Text Link</TextCapsLinkButton>
+      </div>
+
       <br />
     </Container>
   </Section>

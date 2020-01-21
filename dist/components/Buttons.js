@@ -29,6 +29,18 @@ export const SecondaryButton = ({
     color: "white"
   }), !busy && children);
 };
+export const SecondaryAltButton = ({
+  className,
+  busy,
+  children,
+  ...rest
+}) => {
+  return React.createElement(Button, _extends({
+    className: `secondary-alt ${className} ${busy ? 'busy' : null}`
+  }, rest), busy && React.createElement(Loader, {
+    color: "white"
+  }), !busy && children);
+};
 export const TertiaryButton = ({
   className,
   outline,
@@ -39,4 +51,16 @@ export const TertiaryButton = ({
 }, rest));
 export const FlatButton = props => React.createElement(Button, _extends({
   className: 'flat'
+}, props));
+export const TextLinkButton = ({
+  className,
+  ...props
+}) => React.createElement(Button, _extends({
+  className: `text-link ${className}`
+}, props));
+export const TextCapsLinkButton = ({
+  className,
+  ...props
+}) => React.createElement(Button, _extends({
+  className: `text-caps-link ${className}`
 }, props));
