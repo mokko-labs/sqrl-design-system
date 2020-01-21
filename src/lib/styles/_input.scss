@@ -40,6 +40,15 @@ $sqrl-input-left: 16px;
     }
   }
 
+  .password-toggle {
+    position: absolute;
+    height: 100%;
+    right: 8px;
+    cursor: pointer;
+    z-index: 100;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
   /*
   .select:not(.is-multiple):not(.is-loading)::after,
   .navbar-link:not(.is-arrowless)::after {

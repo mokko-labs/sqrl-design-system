@@ -5,12 +5,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import React from 'react';
 import { Label } from 'bloomer';
 import classNames from 'classnames';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 class CustomInput extends React.Component {
   constructor(...args) {
     super(...args);
 
-    _defineProperty(this, "state", {});
+    _defineProperty(this, "state", {
+      inputType: this.props.type
+    });
 
     _defineProperty(this, "_onFocus", evt => {
       this.setState({
@@ -44,8 +48,12 @@ class CustomInput extends React.Component {
       label,
       innerRef,
       style,
+      type,
       ...rest
     } = this.props;
+    const {
+      inputType
+    } = this.state;
     const state = this.state;
     const hasFocus = state.focus;
     const value = rest && rest.value || state.value;
@@ -57,7 +65,12 @@ class CustomInput extends React.Component {
         value: hasValue
       }),
       style: style
-    }, React.createElement(Label, {
+    }, type === 'password' ? React.createElement(FontAwesomeIcon, {
+      className: "password-toggle",
+      onClick: this.togglePasswordVisibility.bind(this),
+      icon: inputType === 'password' ? faEye : faEyeSlash,
+      size: "lg"
+    }) : null, React.createElement(Label, {
       className: classNames({
         floating: shouldFloat,
         focus: hasFocus
@@ -65,14 +78,22 @@ class CustomInput extends React.Component {
     }, label), React.createElement("input", _extends({
       onChange: this._onChange
     }, rest, {
+      type: inputType || 'text',
       value: value || '',
       ref: innerRef,
       onFocus: this._onFocus,
       onBlur: this._onBlur,
       className: classNames('input', {
-        value: hasValue
+        value: hasValue,
+        password: type === 'password'
       })
     })));
+  }
+
+  togglePasswordVisibility() {
+    this.setState({
+      inputType: this.state.inputType === 'password' ? 'text' : 'password'
+    });
   }
 
 }

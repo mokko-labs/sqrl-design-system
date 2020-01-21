@@ -2,6 +2,9 @@ import React from 'react'
 import { Label } from 'bloomer'
 import classNames from 'classnames'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+
 class CustomInput extends React.Component {
   state = {
     inputType: this.props.type
@@ -52,12 +55,12 @@ class CustomInput extends React.Component {
         style={style}
       >
         {type === 'password' ? (
-          <button
+          <FontAwesomeIcon
+            className="password-toggle"
             onClick={this.togglePasswordVisibility.bind(this)}
-            style={{ zIndex: 100, position: 'absolute', right: 0, top: '40%' }}
-          >
-            Toggle
-          </button>
+            icon={inputType === 'password' ? faEye : faEyeSlash}
+            size="lg"
+          />
         ) : null}
 
         <Label

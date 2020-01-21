@@ -7379,6 +7379,13 @@ button.delete {
     .sqrl-input .label.floating {
       font-weight: 500;
       transform: translate(16px, 4px) scale(0.75); }
+  .sqrl-input .password-toggle {
+    position: absolute;
+    height: 100%;
+    right: 8px;
+    cursor: pointer;
+    z-index: 100;
+    color: rgba(0, 0, 0, 0.6); }
   .sqrl-input .select {
     border: none;
     box-shadow: none;
@@ -7429,6 +7436,8 @@ button.delete {
       border-bottom: 2px solid #555; }
     .sqrl-input .input:focus {
       border-bottom: 2px solid #9013fe; }
+    .sqrl-input .input.password {
+      padding-right: 40px; }
   .sqrl-input input:-webkit-autofill,
   .sqrl-input input:-webkit-autofill:hover,
   .sqrl-input input:-webkit-autofill:focus,
