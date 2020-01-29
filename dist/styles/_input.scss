@@ -26,7 +26,7 @@ $sqrl-input-left: 16px;
     transform: translate($sqrl-input-left, 16px);
     transform-origin: left;
 
-    z-index: 100;
+    z-index: 1;
     transition: transform 250ms ease, font-size 250ms ease;
     pointer-events: none;
 
@@ -43,9 +43,9 @@ $sqrl-input-left: 16px;
   .password-toggle {
     position: absolute;
     height: 100%;
-    right: 8px;
+    right: 16px;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1;
     color: rgba(0, 0, 0, 0.6);
   }
 

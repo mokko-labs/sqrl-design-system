@@ -59,7 +59,6 @@ class CustomInput extends React.Component {
             className="password-toggle"
             onClick={this.togglePasswordVisibility.bind(this)}
             icon={inputType === 'password' ? faEye : faEyeSlash}
-            size="lg"
           />
         ) : null}
 

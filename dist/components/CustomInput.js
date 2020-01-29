@@ -68,8 +68,7 @@ class CustomInput extends React.Component {
     }, type === 'password' ? React.createElement(FontAwesomeIcon, {
       className: "password-toggle",
       onClick: this.togglePasswordVisibility.bind(this),
-      icon: inputType === 'password' ? faEye : faEyeSlash,
-      size: "lg"
+      icon: inputType === 'password' ? faEye : faEyeSlash
     }) : null, React.createElement(Label, {
       className: classNames({
         floating: shouldFloat,
