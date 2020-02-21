@@ -1,35 +1,43 @@
 .notification {
+  width: 100%;
   visibility: hidden;
-  min-width: 250px;
   position: absolute;
   bottom: 15px;
-  left: 50%;
-  margin-left: -125px;
-  z-index: 1000;
   color: #fff;
-  text-align: center;
+  z-index: 1000;
+}
+
+.content {
   padding: 9px 24px;
+  background-color: #333;
   font-size: 14px;
   font-weight: 600;
-  border-radius: 4px;
-  background-color: #333;
+  text-align: center;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .notification.success {
-  background-color: #00a400;
+  .content {
+    background-color: #00a400;
+  }
 }
 
 .notification.error {
-  background-color: #d5505c;
+  .content {
+    background-color: #d5505c;
+  }
 }
 
 .notification.warn {
-  background-color: #e5a435;
+  .content {
+    background-color: #e5a435;
+  }
 }
 
 .notification.show {
-  display: block;
+  display: flex;
+  justify-content: center;
   visibility: visible;
   animation: fadein 0.5s, fadeout 0.5s 4.5s;
 }

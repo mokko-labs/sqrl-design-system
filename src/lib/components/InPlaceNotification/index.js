@@ -29,9 +29,8 @@ class Notification extends PureComponent {
               ? [Styles.notification, Styles.show, Styles[this.type]].join(' ')
               : Styles.notification
           }
-          style={this.props.style}
         >
-          {this.message}
+          <div className={Styles.content}>{this.message}</div>
         </div>
       </div>
     )

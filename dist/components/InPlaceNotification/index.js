@@ -39,9 +39,10 @@ class Notification extends PureComponent {
         position: 'relative'
       }
     }, React.createElement("div", {
-      className: isActive ? [Styles.notification, Styles.show, Styles[this.type]].join(' ') : Styles.notification,
-      style: this.props.style
-    }, this.message));
+      className: isActive ? [Styles.notification, Styles.show, Styles[this.type]].join(' ') : Styles.notification
+    }, React.createElement("div", {
+      className: Styles.content
+    }, this.message)));
   }
 
 }
