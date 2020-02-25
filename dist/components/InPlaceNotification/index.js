@@ -2,6 +2,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 import React, { PureComponent } from 'react';
 import Styles from './inPlaceNotification.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faTimes, faExclamation } from '@fortawesome/free-solid-svg-icons';
 
 class Notification extends PureComponent {
   constructor(...args) {
@@ -10,6 +12,8 @@ class Notification extends PureComponent {
     _defineProperty(this, "message", '');
 
     _defineProperty(this, "type", '');
+
+    _defineProperty(this, "timeoutID", null);
 
     _defineProperty(this, "state", {
       isActive: false
@@ -21,16 +25,45 @@ class Notification extends PureComponent {
       this.setState({
         isActive: true
       }, () => {
-        setTimeout(() => {
+        this.timeoutID = setTimeout(() => {
           this.setState({
             isActive: false
           });
         }, 5000);
       });
     });
+
+    _defineProperty(this, "cancelNotification", () => {
+      if (this.timeoutID) {
+        this.setState({
+          isActive: false
+        });
+        clearTimeout(this.timeoutID);
+      }
+    });
   }
 
   render() {
+    let icon = null;
+
+    switch (this.type) {
+      case 'success':
+        icon = faCheck;
+        break;
+
+      case 'error':
+        icon = faTimes;
+        break;
+
+      case 'warn':
+        icon = faExclamation;
+        break;
+
+      default:
+        icon = faCheck;
+        break;
+    }
+
     const {
       isActive
     } = this.state;
@@ -42,7 +75,23 @@ class Notification extends PureComponent {
       className: isActive ? [Styles.notification, Styles.show, Styles[this.type]].join(' ') : Styles.notification
     }, React.createElement("div", {
       className: Styles.content
-    }, this.message)));
+    }, React.createElement("div", {
+      className: Styles.icon
+    }, React.createElement(FontAwesomeIcon, {
+      icon: icon,
+      color: "#FFF"
+    })), React.createElement("span", {
+      style: {
+        marginLeft: 8
+      }
+    }, this.message), React.createElement(FontAwesomeIcon, {
+      icon: faTimes,
+      color: "#000",
+      onClick: this.cancelNotification,
+      style: {
+        marginLeft: 'auto'
+      }
+    }))));
   }
 
 }

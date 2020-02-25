@@ -66,7 +66,7 @@ class Notification extends PureComponent {
             <div className={Styles.icon}>
               <FontAwesomeIcon icon={icon} color="#FFF" />
             </div>
-            <span style={{ marginLeft: 8 }}>{this.message}</span>
+            <span style={{ marginLeft: 8, marginRight: 20 }}>{this.message}</span>
             <FontAwesomeIcon
               icon={faTimes}
               color="#000"
