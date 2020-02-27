@@ -82,7 +82,8 @@ class Notification extends PureComponent {
       color: "#FFF"
     })), React.createElement("span", {
       style: {
-        marginLeft: 8
+        marginLeft: 8,
+        marginRight: 20
       }
     }, this.message), React.createElement(FontAwesomeIcon, {
       icon: faTimes,
