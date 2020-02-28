@@ -353,7 +353,14 @@ class DemoPage extends React.Component {
               />
             </div>
 
-            <QuantityInput onQuantityChange={by => console.log(by)} />
+            <QuantityInput
+              onIncrement={count => {
+                console.log(count)
+              }}
+              onDecrement={count => {
+                console.log(count)
+              }}
+            />
           </Box>
           <FlatLogo />
         </Container>

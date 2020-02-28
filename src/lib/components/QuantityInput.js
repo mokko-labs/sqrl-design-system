@@ -23,7 +23,7 @@ class QuantityInput extends React.Component {
 
   render() {
     const { quantity } = this.state
-    const { step, onQuantityChange } = this.props
+    const { step, base, onIncrement, onDecrement } = this.props
 
     return (
       <div className="quantity-input">
@@ -31,20 +31,24 @@ class QuantityInput extends React.Component {
           icon={faMinusCircle}
           className={classNames({
             toggler: true,
-            inactive: quantity < 1
+            inactive: quantity <= base
           })}
-          onClick={() => {
-            console.log('Clicked -ve')
+          onClick={async () => {
+            let value = Math.max(base, quantity - step)
+            await this.setState({ quantity: value })
+            onDecrement && onDecrement(value)
           }}
         />
 
-        <span>{'' + quantity}</span>
+        <span>{quantity}</span>
 
         <FontAwesomeIcon
           icon={faPlusCircle}
           className="toggler"
-          onClick={() => {
-            console.log('Clicked +ve')
+          onClick={async () => {
+            let value = quantity + step
+            await this.setState({ quantity: value })
+            onIncrement && onIncrement(value)
           }}
         />
       </div>
