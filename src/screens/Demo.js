@@ -14,7 +14,8 @@ import {
   CustomSelect,
   Loader,
   StyledLine,
-  Slider
+  Slider,
+  QuantityInput
 } from '../lib'
 import * as Yup from 'yup'
 import { Field, Formik } from 'formik'
@@ -351,6 +352,8 @@ class DemoPage extends React.Component {
                 checked={this.state.switchOn}
               />
             </div>
+
+            <QuantityInput onQuantityChange={by => console.log(by)} />
           </Box>
           <FlatLogo />
         </Container>
