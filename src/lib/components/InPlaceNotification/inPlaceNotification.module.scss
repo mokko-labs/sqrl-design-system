@@ -1,3 +1,28 @@
+$backgrounds: (
+  success: #e2ffee,
+  warn: #fff0b3,
+  error: #ffebe5,
+  question: #e8f5ff,
+  info: #f6f6fb
+);
+
+$colors: (
+  success: #006644,
+  warn: #172b4d,
+  error: #172b4d,
+  question: #403294,
+  info: #6b6b83
+);
+
+@mixin color-config($type) {
+  &.#{$type} {
+    .content {
+      background-color: map-get($backgrounds, $type);
+      color: map-get($colors, $type);
+    }
+  }
+}
+
 .notification {
   width: 100%;
   visibility: hidden;
@@ -5,38 +30,11 @@
   bottom: 15px;
   z-index: 1000;
 
-  &.success {
-    .content {
-      background-color: #e2ffee;
-      color: #006644;
-
-      .icon {
-        background-color: #13aa37;
-      }
-    }
-  }
-
-  &.error {
-    .content {
-      background-color: #d5505c;
-      color: white;
-
-      .icon {
-        background-color: #d58b96;
-      }
-    }
-  }
-
-  &.warn {
-    .content {
-      background-color: #e5a435;
-      color: white;
-
-      .icon {
-        background-color: #e5b28e;
-      }
-    }
-  }
+  @include color-config(success);
+  @include color-config(warn);
+  @include color-config(error);
+  @include color-config(question);
+  @include color-config(info);
 }
 
 .content {
@@ -44,21 +42,12 @@
   align-items: center;
   padding: 9px 24px;
   background-color: #333;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-align: center;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   min-width: 300px;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 24px;
-  width: 24px;
-  border-radius: 12px;
 }
 
 .notification.show {

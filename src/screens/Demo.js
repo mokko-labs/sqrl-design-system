@@ -381,6 +381,24 @@ class DemoPage extends React.Component {
             >
               In-place Notification : Warn
             </Button>
+
+            <Button
+              className="is-rounded"
+              onClick={() =>
+                this._showNotification('This is a Notification', 'question')
+              }
+            >
+              In-place Notification : Question
+            </Button>
+
+            <Button
+              className="is-rounded"
+              onClick={() =>
+                this._showNotification('This is a Notification', 'info')
+              }
+            >
+              In-place Notification : Info
+            </Button>
           </div>
         </Container>
         <Container>

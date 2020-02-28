@@ -3,9 +3,12 @@ import Styles from './inPlaceNotification.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faCheck,
   faTimes,
-  faExclamation
+  faCheckCircle,
+  faExclamationCircle,
+  faExclamationTriangle,
+  faQuestionCircle,
+  faInfoCircle
 } from '@fortawesome/free-solid-svg-icons'
 
 class Notification extends PureComponent {
@@ -36,19 +39,32 @@ class Notification extends PureComponent {
 
   render() {
     let icon = null
+    let iconColor = null
 
     switch (this.type) {
       case 'success':
-        icon = faCheck
-        break
-      case 'error':
-        icon = faTimes
+        icon = faCheckCircle
+        iconColor = '#13aa37'
         break
       case 'warn':
-        icon = faExclamation
+        icon = faExclamationCircle
+        iconColor = '#faae1d'
+        break
+      case 'error':
+        icon = faExclamationTriangle
+        iconColor = '#e26a3d'
+        break
+      case 'question':
+        icon = faQuestionCircle
+        iconColor = '#419bf9'
+        break
+      case 'info':
+        icon = faInfoCircle
+        iconColor = '#8e8e8e'
         break
       default:
-        icon = faCheck
+        icon = faCheckCircle
+        iconColor = '#13aa37'
         break
     }
 
@@ -63,10 +79,10 @@ class Notification extends PureComponent {
           }
         >
           <div className={Styles.content}>
-            <div className={Styles.icon}>
-              <FontAwesomeIcon icon={icon} color="#FFF" />
-            </div>
-            <span style={{ marginLeft: 8, marginRight: 20 }}>{this.message}</span>
+            <FontAwesomeIcon icon={icon} color={iconColor} size="2x" />
+            <span style={{ marginLeft: 8, marginRight: 20 }}>
+              {this.message}
+            </span>
             <FontAwesomeIcon
               icon={faTimes}
               color="#000"
