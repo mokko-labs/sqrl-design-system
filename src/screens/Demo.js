@@ -14,7 +14,8 @@ import {
   CustomSelect,
   Loader,
   StyledLine,
-  Slider
+  Slider,
+  QuantityInput
 } from '../lib'
 import * as Yup from 'yup'
 import { Field, Formik } from 'formik'
@@ -351,6 +352,15 @@ class DemoPage extends React.Component {
                 checked={this.state.switchOn}
               />
             </div>
+
+            <QuantityInput
+              onIncrement={count => {
+                console.log(count)
+              }}
+              onDecrement={count => {
+                console.log(count)
+              }}
+            />
           </Box>
           <FlatLogo />
         </Container>
@@ -380,6 +390,24 @@ class DemoPage extends React.Component {
               }
             >
               In-place Notification : Warn
+            </Button>
+
+            <Button
+              className="is-rounded"
+              onClick={() =>
+                this._showNotification('This is a Notification', 'question')
+              }
+            >
+              In-place Notification : Question
+            </Button>
+
+            <Button
+              className="is-rounded"
+              onClick={() =>
+                this._showNotification('This is a Notification', 'info')
+              }
+            >
+              In-place Notification : Info
             </Button>
           </div>
         </Container>

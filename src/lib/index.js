@@ -13,3 +13,4 @@ export {
   default as InPlaceNotification
 } from './components/InPlaceNotification'
 export * from './components/Buttons'
+export { default as QuantityInput } from './components/QuantityInput'
