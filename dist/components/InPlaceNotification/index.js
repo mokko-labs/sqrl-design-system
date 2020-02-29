@@ -3,7 +3,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import React, { PureComponent } from 'react';
 import Styles from './inPlaceNotification.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faTimes, faExclamation } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faCheckCircle, faExclamationCircle, faExclamationTriangle, faQuestionCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 class Notification extends PureComponent {
   constructor(...args) {
@@ -45,22 +45,37 @@ class Notification extends PureComponent {
 
   render() {
     let icon = null;
+    let iconColor = null;
 
     switch (this.type) {
       case 'success':
-        icon = faCheck;
-        break;
-
-      case 'error':
-        icon = faTimes;
+        icon = faCheckCircle;
+        iconColor = '#13aa37';
         break;
 
       case 'warn':
-        icon = faExclamation;
+        icon = faExclamationCircle;
+        iconColor = '#faae1d';
+        break;
+
+      case 'error':
+        icon = faExclamationTriangle;
+        iconColor = '#e26a3d';
+        break;
+
+      case 'question':
+        icon = faQuestionCircle;
+        iconColor = '#419bf9';
+        break;
+
+      case 'info':
+        icon = faInfoCircle;
+        iconColor = '#8e8e8e';
         break;
 
       default:
-        icon = faCheck;
+        icon = faCheckCircle;
+        iconColor = '#13aa37';
         break;
     }
 
@@ -75,12 +90,11 @@ class Notification extends PureComponent {
       className: isActive ? [Styles.notification, Styles.show, Styles[this.type]].join(' ') : Styles.notification
     }, React.createElement("div", {
       className: Styles.content
-    }, React.createElement("div", {
-      className: Styles.icon
     }, React.createElement(FontAwesomeIcon, {
       icon: icon,
-      color: "#FFF"
-    })), React.createElement("span", {
+      color: iconColor,
+      size: "2x"
+    }), React.createElement("span", {
       style: {
         marginLeft: 8,
         marginRight: 20

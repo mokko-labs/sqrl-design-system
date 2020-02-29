@@ -10,3 +10,4 @@ export { default as Pill } from './components/Pill';
 export { default as Slider } from './components/Slider';
 export { default as InPlaceNotification } from './components/InPlaceNotification';
 export * from './components/Buttons';
+export { default as QuantityInput } from './components/QuantityInput';

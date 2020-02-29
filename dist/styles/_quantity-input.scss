@@ -1,0 +1,27 @@
+.quantity-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+
+  span {
+    font-size: 16px;
+    color: #00071e;
+    font-weight: 600;
+  }
+
+  .toggler {
+    font-size: 24px;
+    color: #13aa37;
+    cursor: pointer;
+
+    &.inactive {
+      color: #c2c0c6;
+      cursor: not-allowed;
+    }
+  }
+}
