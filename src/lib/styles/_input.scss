@@ -1,9 +1,10 @@
 $sqrl-input-left: 16px;
+$sqrl-input-height: 56px;
 
 .sqrl-input {
   position: relative;
   width: 100%;
-  height: 56px;
+  height: $sqrl-input-height;
   background-color: rgba(0, 0, 0, 0.097);
   margin-bottom: 28px;
   overflow: hidden;
@@ -61,16 +62,17 @@ $sqrl-input-left: 16px;
     box-shadow: none;
     border-radius: 0;
     padding: 0;
-    height: 56px;
+    height: $sqrl-input-height;
     width: 100%;
     position: relative;
     select {
       position: relative;
-      top: 20px;
+      top: 0;
       width: 100%;
       font-size: 1em;
-      //height: auto !important;
+      height: $sqrl-input-height;
       padding: 0px $sqrl-input-left;
+      padding-top: 20px;
       border: none;
       border-bottom: 2px solid transparent;
 
@@ -104,7 +106,7 @@ $sqrl-input-left: 16px;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    height: 56px;
+    height: $sqrl-input-height;
     border: none;
     box-shadow: none;
     border-radius: 0;
